@@ -1,3 +1,8 @@
+<?php
+//Including config file
+include_once("app/config/config.php");
+?>
+
 <!doctype html>
 <html lang="en-AU">
 
@@ -20,7 +25,7 @@
 
 <header>
 <!--    Getting the header document-->
-    <?php include "public/core/header.php" ?>
+    <?php include_once("public/core/header.php"); ?>
 </header>
 
 <main>
@@ -29,7 +34,7 @@
 
 <footer>
 <!--    Getting the footer document-->
-    <?php include "public/core/footer.php" ?>
+    <?php include_once("public/core/footer.php"); ?>
 </footer>
 
 </body>
