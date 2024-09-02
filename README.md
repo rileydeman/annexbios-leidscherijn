@@ -24,14 +24,6 @@ You are allowed to fork and/or use this repository/template and edit all the fil
 Mostly the `.htacces` file can't get the good file, in that case go to the `.htaccess file` and add the following code to the file:
 `RewriteRule ^requestName public/requestName.php`
 
-## Styling
-
-For the styling from the site does rileydeman use sass, you are free to delete the sass file and folder, but in case you want to use sass be sure that you do this:
-
-- Be sure that you have installed sass to your system, go to your global terminal and use this `npm install -g sass`
-- To compile sass you need to be sure that your terminal is in the assets folder and use the following command (everytime you start working on your site) in de terminal: `sass --watch --no-source-map sass/input.sass css/output.css`
-- Be sure that you connect the `.css` files to your web pages, web browsers **can't** read `.sass` and/or `.scss` files.
-
 ## Changing document root in xampp
 
 1. Go to the folder where the index.php is located
