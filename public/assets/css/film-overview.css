@@ -1,0 +1,14 @@
+main {
+  .bb {
+    height: 100%;
+    background-color: black;
+    border: 1px solid rgb(170, 243, 0);
+    .mb {
+      background-color: lightblue;
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+    }
+  }
+}

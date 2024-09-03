@@ -35,7 +35,11 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
+ <div class="bb">
     <p>Main films overview</p>
+    <div class="mb">
+    </div>
+ </div>
 </main>
 
 <footer>
