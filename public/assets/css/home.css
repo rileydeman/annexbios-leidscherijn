@@ -1,0 +1,49 @@
+.block1 {
+    background-color: var(--primary);
+
+    width: 90%;
+    height: 200px;
+
+    margin-left: 5%;
+    padding: 2%;
+
+    .welcome-text {
+        color: white;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .introductie-text {
+        color: white;
+
+        padding-top: 2%;
+    }
+
+    .draaiende-films-knop {
+        background-color: white;
+        color: var(--primary);
+
+        width: 240px;
+        height: 40px;
+
+        margin-top: 2%;
+
+        align-content: center;
+
+        .draaiende-films-knop-text {
+            padding-inline: 2%;
+            font-weight: bold;
+        }
+    }
+}
+
+.block2 {
+    background-color: white;
+
+    width: 90%;
+    height: 400px;
+
+    margin-top: 4%;
+    margin-left: 5%;
+    padding: 2%;
+}

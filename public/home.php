@@ -36,6 +36,25 @@ include_once("app/config/config.php");
 
 <main>
     <p>Main</p>
+    <div class="block1">
+        <p class="welcome-text">Welkom bij AnnexBios Leidscherijn</p>
+        <p class="introductie-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+        <div class="draaiende-films-knop"><p class="draaiende-films-knop-text">BEKIJK DE DRAAIENDE FILMS</p></div>
+    </div>
+    <div class="block2">
+        <div class="left">
+            <img class="locatie-view" src="https://placehold.co/500x150">
+            <div class="info">
+                <div class="locatie">
+                    <!-- <img class="pin" src="https://placehold.co/30x30"> -->
+                    <!-- <div class="text">Berlijnplein 101 <br> 3541 CM Utrecht</div> -->
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <!-- <img> -->
+        </div>
+    </div>
 </main>
 
 <footer>
