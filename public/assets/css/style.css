@@ -1,0 +1,41 @@
+:root {
+    --background: #000000;
+    --headerBackground: #FFFFFF;
+    --footerBackground: #666666;
+
+    --primary: #0080FF;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: lato;
+    font-weight: bold;
+}
+
+p {
+    font-family: lato;
+}
+
+body {
+    width: 100%;
+
+    header {
+        background-color: var(--headerBackground);
+    }
+
+    main {
+        background-color: var(--background);
+        color: #FFFFFF;
+    }
+
+    footer {
+        background-color: var(--footerBackground);
+        color: #FFFFFF;
+    }
+}
