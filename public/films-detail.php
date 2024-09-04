@@ -41,23 +41,45 @@ include_once("../app/config/config.php");
     <p class="film-title"><!-- <?=$title ?> -->JURASSIC WORLD: FALLEN KINGDOM</p>
     <div class="info">
         <div class="left">
-            <!-- <img src=film-poster> -->
+            <img class="poster" src="../public/assets/img/poster.png">
         </div>
         <div class="right">
-            <div class="beoordeling"></div>
-            <div class="kijkwijzers"></div>
+            <div class="beoordeling">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+            </div>
+            <div class="kijkwijzers">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+            </div>
             <p class="release">Release: <!-- <?=$release ?> --></p>
-            <p class="beschrijfing"><!-- <?=$Beschrijfing ?> --></p>
+            <p class="beschrijfing">BLAH BLAH BLAH BLAAHA BLAH<!-- <?=$Beschrijfing ?> --></p>
             <div class="film-info">
-                <p class="genre">Genre: <!-- <?=$genre ?> --></p>
-                <div class="duur">Duur: <!-- <?= $Duur ?> --></div>
-                <div class="land">Land: <!-- <?= $Land ?> --></div>
-                <div class="score">Score:<!-- <?= $imdbScore ?> --></div>
-                <div class="regiseur"></div>
-                <div class="acteurs"></div>
+                <p class="genre"><b>Genre:</b> Actie<!-- <?=$genre ?> --></p>
+                <p class="duur"><b>Duur:</b> 100m<!-- <?= $Duur ?> --></p>
+                <p class="land"><b>Land:</b> USA<!-- <?= $Land ?> --></p>
+                <p class="score"><b>Score:</b> 8.9<!-- <?= $imdbScore ?> -->/10</p>
+                <p class="regiseur"><b>Regiseur:</b> persoon<!-- <?= $regiseur?> --></p>
+                <p class="acteurs-text"><b>Acteurs:</b></p>
+                <div class="acteurs">
+                    <div class="persoon">
+                        <img class="person-foto" src="../public/assets/img/persoon.png">
+                        <p class="persoon-naam">Bryce Dallas Howard</p>
+                    </div>
+                    <div class="persoon">
+                        <img class="person-foto" src="../public/assets/img/persoon.png">
+                        <p class="persoon-naam">Bryce Dallas Howard</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <p class="koop-je-tickets"><!-- <?=$title ?> -->JURASSIC WORLD: FALLEN KINGDOM</p>
+    <div class="trailer"></div>
 </main>
 
 <footer>
