@@ -35,7 +35,27 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
-    <p>Main films detail</p>
+    <!-- <p>Main films detail</p> -->
+    <p class="film-title"><!-- <?=$title ?> -->JURASSIC WORLD: FALLEN KINGDOM</p>
+    <div class="info">
+        <div class="left">
+            <!-- <img src=film-poster> -->
+        </div>
+        <div class="right">
+            <div class="beoordeling"></div>
+            <div class="kijkwijzers"></div>
+            <p class="release">Release: <!-- <?=$release ?> --></p>
+            <p class="beschrijfing"><!-- <?=$Beschrijfing ?> --></p>
+            <div class="film-info">
+                <p class="genre">Genre: <!-- <?=$genre ?> --></p>
+                <div class="duur">Duur: <!-- <?= $Duur ?> --></div>
+                <div class="land">Land: <!-- <?= $Land ?> --></div>
+                <div class="score">Score:<!-- <?= $imdbScore ?> --></div>
+                <div class="regiseur"></div>
+                <div class="acteurs"></div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer>
