@@ -36,7 +36,19 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
-    <p>Main films overview</p>
+ <div class="blackb">
+   <div class="cropb">
+     <div class="titleb">
+        <div class="catt">
+        <h2>FILM AGENDA</h2>
+        </div>
+     </div>
+     <div class="filterb">
+     </div>
+     <div class="moviesb">
+     </div>
+    </div>
+  </div>
 </main>
 
 <footer>
