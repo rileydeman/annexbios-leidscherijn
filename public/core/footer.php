@@ -11,10 +11,24 @@
             </a>
         </div>
         <div id="navigation">
-            <p>Navigation</p>
+            <h3>Navigation</h3>
+            <div id="footerNav">
+                <a href="/" class="footerNavItem">
+                    <p>Werken bij</p>
+                </a>
+                <a href="/" class="footerNavItem">
+                    <p>Veelgestelde vragen</p>
+                </a>
+                <a href="/" class="footerNavItem">
+                    <p>Vestigingen</p>
+                </a>
+                <a href="/" class="footerNavItem">
+                    <p>Contact</p>
+                </a>
+            </div>
         </div>
         <div id="socials">
-            <p>Socials</p>
+            <h3>Socials</h3>
         </div>
     </div>
     <div id="right">

@@ -41,6 +41,18 @@ footer {
             #navigation {
                 height: 100%;
                 margin-right: 3%;
+
+                #footerNav {
+                    margin-top: 10%;
+
+                    .footerNavItem {
+                        padding: 1% 0;
+
+                        p {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
             }
 
             #socials {
