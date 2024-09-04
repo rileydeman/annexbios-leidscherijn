@@ -36,7 +36,6 @@ include_once("app/config/config.php");
 </header>
 
 <main>
-    <p>Main</p>
     <div class="block1">
         <p class="welcome-text">Welkom bij AnnexBios Leidscherijn</p>
         <p class="introductie-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
