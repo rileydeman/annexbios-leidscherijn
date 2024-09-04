@@ -41,23 +41,45 @@ include_once("../app/config/config.php");
     <p class="film-title"><!-- <?=$title ?> -->JURASSIC WORLD: FALLEN KINGDOM</p>
     <div class="info">
         <div class="left">
-            <!-- <img src=film-poster> -->
+            <img class="poster" src="../public/assets/img/poster.png">
         </div>
         <div class="right">
-            <div class="beoordeling"></div>
-            <div class="kijkwijzers"></div>
+            <div class="beoordeling">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+            </div>
+            <div class="kijkwijzers">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <img class="kijkwijzer" src="https://placehold.co/40x40">
+            </div>
             <p class="release">Release: <!-- <?=$release ?> --></p>
-            <p class="beschrijfing"><!-- <?=$Beschrijfing ?> --></p>
+            <p class="beschrijfing">In het 3D actie-spektakel Jurassic World: Fallen Kingdom keren favoriete personages terug en worden er nieuwe soorten dinosaurussen geïntroduceerd die nog angstaanjagender zijn dan ooit tevoren. Welkom in Jurassic World: Fallen Kingdom! Drie jaar geleden werd het themapark en luxeresort Jurassic World verwoest door losgebarsten dinosaurussen. Isla Nublar is nu een onbewoond eiland geworden waar de overgebleven dinosaurussen in de jungle aan hun lot overgelaten zijn. Wanneer de slapende vulkaan op het eiland weer actief wordt, dreigen de dinosaurussen opnieuw uit te sterven. Claire (Bryce Dallas Howard) zet alles op alles om dit te voorkomen. Ze weet Owen (Chris Pratt) over te halen om samen met haar en een team van specialisten terug te gaan naar Isla Nublar om te proberen de dinosaurussen te redden. Owen is vastbesloten om de vermiste raptor Blue, die hij van jongs af aan heeft getraind, te vinden. Als ze op het eiland arriveren blijkt de vulkaan die op uitbarsten staat niet hun grootste probleem te zijn. In dit nieuwe deel van één van de meest populaire en succesvolle filmreeksen ooit zullen Jeff Goldblum en BD Wong weer te zien zijn als Ian Malcolm en Dr. Henry Wu. De cast bestaat verder uit James Cromwell, Ted Levine, Justice Smith, Geraldine Chaplin, Daniella Pineda, Toby Jones en Rafe Spall. De regie is in handen van J.A. Bayona (The Impossible), en het scenario is geschreven door Colin Trevorrow en Derek Connolly, de regisseur en co-scenarist van Jurassic World. Steven Spielberg en Colin Trevorrow treden op als uitvoerend producenten namens Universal Pictures en Amblin Entertainment. Productie is in handen van Frank Marshall, Pat Crowley en Belén Atienza.<!-- <?=$Beschrijfing ?> --></p>
             <div class="film-info">
-                <p class="genre">Genre: <!-- <?=$genre ?> --></p>
-                <div class="duur">Duur: <!-- <?= $Duur ?> --></div>
-                <div class="land">Land: <!-- <?= $Land ?> --></div>
-                <div class="score">Score:<!-- <?= $imdbScore ?> --></div>
-                <div class="regiseur"></div>
-                <div class="acteurs"></div>
+                <p class="genre"><b>Genre:</b> Actie<!-- <?=$genre ?> --></p>
+                <p class="duur"><b>Duur:</b> 100m<!-- <?= $Duur ?> --></p>
+                <p class="land"><b>Land:</b> USA<!-- <?= $Land ?> --></p>
+                <p class="score"><b>Score:</b> 8.9<!-- <?= $imdbScore ?> -->/10</p>
+                <p class="regiseur"><b>Regiseur:</b> persoon<!-- <?= $regiseur?> --></p>
+                <p class="acteurs-text"><b>Acteurs:</b></p>
+                <div class="acteurs">
+                    <div class="persoon">
+                        <img class="person-foto" src="../public/assets/img/persoon.png">
+                        <p class="persoon-naam">Bryce Dallas Howard</p>
+                    </div>
+                    <div class="persoon">
+                        <img class="person-foto" src="../public/assets/img/persoon.png">
+                        <p class="persoon-naam">Bryce Dallas Howard</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <p class="koop-je-tickets">KOOP JE TICKETS</p>
+    <iframe class="trailer" src="https://www.youtube.com/embed/1FJD7jZqZEk" title="Jurassic World: Fallen Kingdom - Final Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </main>
 
 <footer>
