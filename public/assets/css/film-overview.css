@@ -1,14 +1,47 @@
 main {
-  .bb {
-    height: 100%;
+  .blackb {
     background-color: black;
-    border: 1px solid rgb(170, 243, 0);
-    .mb {
+    border: 1px solid rgb(0, 0, 0);
+
+    .cropb {
       background-color: lightblue;
-      padding-top: 50px;
-      padding-right: 30px;
-      padding-bottom: 50px;
-      padding-left: 80px;
+      margin-left: 5%;
+      margin-top: 4%;
+      margin-right: 5%;
+      margin-bottom: 2%;
+
+      .titleb {
+        background-color: rgb(255, 255, 255);
+        margin-right: 50%;
+        height: 12%;
+        display: flex;
+        align-items: center;
+        border: 0.1px solid #777;
+        .catt {
+          padding-left: 5%;
+          font-size: 2rem;
+          color: var(--primary);
+        }
+      }
+      .filterb {
+        background-color: rgb(227, 215, 123);
+        margin-top: 1%;
+        height: 6%;
+      }
+      .moviesb {
+        background-color: rgb(184, 123, 227);
+        margin-top: 3%;
+
+        height: 100%;
+      }
     }
   }
+}
+
+h2 {
+  font-family: lato;
+  font-weight: bold;
+  display: flex;
+
+  text-align: left;
 }
