@@ -21,10 +21,23 @@
 <div id="bottom">
     <form action="">
         <p id="formTitle">KOOP JE TICKETS</p>
-        <select name="film" id="">
-            <option value="hideOption">Kies je film</option>
-            <option value="">Jurrassic World: Rebirth</option>
-            <option value="">Insidious: The Red Door</option>
-        </select>
+
+        <div class="select" id="headerSelect">
+            <input type="hidden" name="film" id="headerSelectInput">
+
+            <div class="placeholder" id="headerSelectPlaceholder">
+                <p id="headerSelectText">Kies je film</p>
+                <img id="headerSelectArrow" src="<?= BASEURL ?>public/assets/img/icons/angle-down.png" alt="">
+            </div>
+
+            <div class="options" id="headerSelectOptions">
+                <div class="option headerSelectOption">
+                    <p>Jurrassic World: Rebirth</p>
+                </div>
+                <div class="option headerSelectOption">
+                    <p>Insidious: The Red Door</p>
+                </div>
+            </div>
+        </div>
     </form>
 </div>

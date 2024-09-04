@@ -62,26 +62,84 @@ header {
                 margin-right: 2%;
             }
 
-            select {
-                outline: none;
-                padding: .3%;
+            #headerSelect {
+                position: relative;
                 background-color: #76BBD953;
                 color: #FFFFFF;
-                border: none;
+                min-width: 20%;
+                width: auto;
+                min-height: 1.75rem;
 
-                option {
-                    padding: .3%;
-                    background-color: #FFFFFF;
-                    color: #000000;
+                .placeholder {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 95%;
+                    padding: .4% 1%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        opacity: .75;
+                    }
+
+                    #headerSelectArrow {
+                        aspect-ratio: 1/1;
+                        width: 15px;
+                        opacity: .75;
+                        transition: .5s ease;
+                    }
 
                     &:hover {
-                        background-color: var(--primary);
-                        color: #FFFFFF;
+                        p {
+                            opacity: 1;
+                        }
+
+                        #headerSelectArrow {
+                            opacity: 1;
+                        }
                     }
                 }
 
-                option[value="hideOption"] {
-                    display: none;
+                .options {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background-color: var(--footerBackground);
+                    overflow-y: hidden;
+                    max-height: 0;
+                    transition: .5s ease;
+                    z-index: 1;
+
+                    border: 2px solid var(--primary);
+                    border-top: 0;
+
+                    .option {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 2.5%;
+
+                        border-top: 1px solid var(--primary);
+                        border-bottom: 1px solid var(--primary);
+
+                        &:nth-child(1) {
+                            border-top: 0;
+                        }
+
+                        &:nth-last-child(1) {
+                            border-bottom: 0;
+                        }
+
+                        &:hover {
+                            background-color: var(--primary);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
