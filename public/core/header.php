@@ -19,7 +19,7 @@
 </div>
 
 <div id="bottom">
-    <form action="">
+    <form action="/" id="headerSelectFilmForm" method="get" target="_blank">
         <p id="formTitle">KOOP JE TICKETS</p>
 
         <div class="select" id="headerSelect">
@@ -38,6 +38,10 @@
                     <p>Insidious: The Red Door</p>
                 </div>
             </div>
+        </div>
+
+        <div id="headerFormSubmitBtn">
+            <p>BESTEL TICKETS</p>
         </div>
     </form>
 </div>

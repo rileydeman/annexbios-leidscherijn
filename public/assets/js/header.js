@@ -30,3 +30,10 @@ for (let i = 0; i < headerSelectOption.length; i++) {
         headerSelectText.innerHTML = headerSelectInput.value;
     })
 }
+
+let headerSelectFilmForm = document.getElementById("headerSelectFilmForm");
+let headerFormSubmitBtn = document.getElementById("headerFormSubmitBtn");
+
+headerFormSubmitBtn.addEventListener("click", function (event) {
+    headerSelectFilmForm.submit();
+})

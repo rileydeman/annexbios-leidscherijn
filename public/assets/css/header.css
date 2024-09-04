@@ -94,6 +94,8 @@ header {
                     }
 
                     &:hover {
+                        cursor: pointer;
+
                         p {
                             opacity: 1;
                         }
@@ -139,6 +141,29 @@ header {
                             background-color: var(--primary);
                             cursor: pointer;
                         }
+                    }
+                }
+            }
+
+            #headerFormSubmitBtn {
+                background-color: #FFFFFF;
+                margin-left: 1%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .4% 1.4%;
+
+                p {
+                    color: var(--primary);
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    background-color: #76BBD953;
+
+                    p {
+                        color: #FFFFFF;
                     }
                 }
             }
