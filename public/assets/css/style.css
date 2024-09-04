@@ -25,6 +25,10 @@ p {
 body {
     width: 100%;
 
+    a {
+        text-decoration: none;
+    }
+
     header {
         background-color: var(--headerBackground);
     }

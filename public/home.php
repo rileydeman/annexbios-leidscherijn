@@ -25,6 +25,7 @@ include_once("app/config/config.php");
 
 <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/header.js"></script>
 </head>
 
 <body>
