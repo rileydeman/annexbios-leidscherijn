@@ -5,10 +5,11 @@ main {
 
     .cropb {
       background-color: lightblue;
-      margin-left: 5%;
+      margin-left: 10%;
       margin-top: 4%;
       margin-right: 5%;
       margin-bottom: 2%;
+      max-width: 80%;
 
       .titleb {
         background-color: rgb(255, 255, 255);
@@ -32,7 +33,7 @@ main {
         background-color: rgb(184, 123, 227);
         margin-top: 3%;
 
-        height: 100%;
+        height: 200%;
       }
     }
   }
@@ -42,6 +43,59 @@ h2 {
   font-family: lato;
   font-weight: bold;
   display: flex;
-
   text-align: left;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1%;
+  grid-row-gap: 2.5%;
+}
+/* 771.84 all box 100%
+128.65 perbox 100%
+
+200px per poster
+
+1200px poster all
+
+0,6432
+128,64
+
+
+DOEN
+397px hei 1de
+337px hei 2de
+
+factor
+
+
+ECHT
+122.21 wi
+183.31 hei
+
+*/
+
+.mobox1,
+.mobox2,
+.mobox3,
+.mobox4,
+.mobox5,
+.mobox6,
+.mobox7,
+.mobox8,
+.mobox9,
+.mobox10,
+.mobox11,
+.mobox12,
+.mobox13,
+.mobox14,
+.mobox15,
+.mobox16,
+.mobox17,
+.mobox18 {
+  background-color: blue;
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  height: 72, 36px;
 }
