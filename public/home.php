@@ -43,17 +43,29 @@ include_once("app/config/config.php");
     </div>
     <div class="block2">
         <div class="left">
-            <img class="locatie-view" src="https://placehold.co/500x150">
+            <!-- <iframe class="locatie-view" src="https://placehold.co/400x200"></iframe> -->
+            <img class="locatie-view" src="https://placehold.co/450x200">
             <div class="info">
                 <div class="locatie">
-                    <!-- <img class="pin" src="https://placehold.co/30x30"> -->
-                    <!-- <div class="text">Berlijnplein 101 <br> 3541 CM Utrecht</div> -->
+                    <img class="info-icon pin" src="./public/assets/img/icons/location.png">
+                    <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+                </div>
+                <div class="telefoon">
+                    <img class="info-icon phone" src="./public/assets/img/icons/phone.png">
+                    <p>088 - 5152050</p>
+                </div>
+                <div class="bereikbaarheid">
+                    <p class="bereikbaarheid-hoofd"><b>BEREIKBAARHEID</b></p>
+                    <p class="bereikbaarheid-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
                 </div>
             </div>
         </div>
         <div class="right">
-            <!-- <img> -->
+            <img class="bios-foto" src="./public/assets/img/LRC-bios-2.png">
         </div>
+    </div>
+    <div class="block3">
+        <div class="alle-films-knop" src="./public/film-overview.php"><p>BEKIJK ALLE FILMS</p></div>
     </div>
 </main>
 

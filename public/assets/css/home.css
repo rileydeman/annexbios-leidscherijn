@@ -41,9 +41,108 @@
     background-color: white;
 
     width: 90%;
-    height: 400px;
+    height: 450px;
 
     margin-top: 4%;
     margin-left: 5%;
-    padding: 2%;
+    padding: 25px;
+
+    display: flex;
+
+    .left {
+
+        width: 450px;
+        /* width: 59.802174%; */
+        height: 450px;
+
+        .info {
+            background-color: var(--primary);
+
+            width: 450px;
+            /* width: 59.802174%; */
+            height: 200px;
+
+            .location-view {}
+
+            .locatie {
+                /* background-color: green; */
+
+                width: 400px;
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+
+                .pin {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+
+            .telefoon {
+                /* background-color: red; */
+
+                width: 450px;
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+
+                .phone {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+
+            .bereikbaarheid {
+                height: 100px;
+
+                /* .bereikbaarheid-hoofd {
+
+                }
+                .bereikbaarheid-text {
+
+                } */
+            }
+        }
+    }
+
+    .right {
+        background-color: blue;
+
+        margin-left: 25px;
+        width: 600px;
+        height: 400px;
+
+        .bios-foto {
+            width: 600px;
+            height: 400px;
+        }
+    }
+}
+
+.block3 {
+    background-color: white;
+
+    width: 90%;
+    height: fit-content;
+
+    margin-top: 4%;
+    margin-left: 5%;
+    padding: 25px;
+
+    .alle-films-knop {
+        background-color: #4596BA;
+
+        width: 200px;
+        height: 50px;
+
+        padding-left: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* font-weight: bold; */
+    }
 }
