@@ -45,11 +45,12 @@ include_once("../app/config/config.php");
         </div>
         <div class="right">
             <div class="beoordeling">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <?php // if ($beoordeling => 1) {?>
+                        <img class="sterren" src="https://placehold.co/40x40">
+                    <?php //  if ($beoordeling => 2) {?>
+                        <img class="sterren" src="https://placehold.co/40x40">
+                    <?php // }
+                //}?>
             </div>
             <div class="kijkwijzers">
                 <div class="kijkwijzers-leefdtijd">
