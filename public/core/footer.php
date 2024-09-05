@@ -29,6 +29,18 @@
         </div>
         <div id="socials">
             <h3>Socials</h3>
+
+            <div id="footerSocialIcons">
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/facebook.png" alt="">
+                </a>
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/x.png" alt="">
+                </a>
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/instagram.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
     <div id="right">
@@ -37,5 +49,8 @@
 </div>
 
 <div id="bottom">
-    <p>Bottom</p>
+    <div id="content">
+        <p><a href="/">Voorwaarden</a> | <a href="/">Privacy beleid</a> | <a href="/">Cookie disclaimer</a></p>
+        <p>&copy; 2024-<?= Date("Y") ?> AnnexBios // Powered by <a href="https://www.rileydeman.com/" class="poweredByText">rileydeman</a>, Jesse & Tristan</p>
+    </div>
 </div>

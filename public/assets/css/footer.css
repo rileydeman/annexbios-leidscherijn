@@ -46,10 +46,17 @@ footer {
                     margin-top: 10%;
 
                     .footerNavItem {
+                        margin-top: 1%;
                         padding: 1% 0;
 
                         p {
                             color: #FFFFFF;
+                        }
+
+                        &:hover {
+                            p {
+                                color: var(--primary);
+                            }
                         }
                     }
                 }
@@ -57,6 +64,33 @@ footer {
 
             #socials {
                 height: 100%;
+
+                #footerSocialIcons {
+                    margin-top: 8%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .social {
+                        aspect-ratio: 1/1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 3vw;
+                        margin-right: 5%;
+
+                        img {
+                            aspect-ratio: 1/1;
+                            width: 85%;
+                            transition: .5s ease;
+                        }
+
+                        &:hover {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -73,5 +107,29 @@ footer {
 
     #bottom {
         background: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #content {
+            width: 80%;
+            padding: 1% 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                color: #FFFFFF;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+
+            .poweredByText {
+                color: var(--primary);
+            }
+        }
     }
 }
