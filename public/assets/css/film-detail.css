@@ -30,7 +30,7 @@
     gap: 1%;
 
     .left {
-        width: 38.5%;
+        width: 38%;
         height: fit-content;
 
         .poster {
@@ -42,7 +42,7 @@
     .right {
         background-color: white;
 
-        width: 62.5%;
+        width: 62%;
         height: fit-content;
 
         padding-top: 25px;
@@ -52,6 +52,11 @@
         .beoordeling {
             width: fit-content;
             height: 50px;
+
+            .sterren {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         .kijkwijzers {
@@ -60,8 +65,10 @@
 
             margin-top: 25px;
 
-
             padding-left: 5px;
+
+            display: flex;
+
 
             .kijkwijzer {
                 width: 40px;
