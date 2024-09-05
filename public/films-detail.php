@@ -52,9 +52,52 @@ include_once("../app/config/config.php");
                 <img class="kijkwijzer" src="https://placehold.co/40x40">
             </div>
             <div class="kijkwijzers">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
-                <img class="kijkwijzer" src="https://placehold.co/40x40">
+                <div class="kijkwijzers-leefdtijd">
+                    <?php // if($kijkwijzer_leeftijd_al == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Alle leeftijden" src="../public/assets/img/icons/kijkwijzer/al.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_6 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="6 jaar" src="../public/assets/img/icons/kijkwijzer/6.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_9 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="9 jaar" src="../public/assets/img/icons/kijkwijzer/9.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_12 == true){ ?>
+                    <img class="kijkwijzer" title="12 jaar" src="../public/assets/img/icons/kijkwijzer/12.png">
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_14 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="14 jaar" src="../public/assets/img/icons/kijkwijzer/14.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_16 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="16 jaar" src="../public/assets/img/icons/kijkwijzer/16.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_18 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="18 jaar" src="../public/assets/img/icons/kijkwijzer/18.png"> -->
+                    <?php // } ?>
+                </div>
+                <div class="kijkwijzers-inhoud">
+                <?php // if($kijkwijzer_leeftijd_al == true){ ?>
+                    <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_6 == true){ ?>
+                    <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_9 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Seks" src="../public/assets/img/icons/kijkwijzer/seks.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_12 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Discriminatie" src="../public/assets/img/icons/kijkwijzer/discriminatie.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_14 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Roken, alcohol en drugs" src="../public/assets/img/icons/kijkwijzer/drugs-en-alcohol.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_16 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Grof taalgebruik" src="../public/assets/img/icons/kijkwijzer/taal.png"> -->
+                    <?php // } ?>
+                    <?php // if($kijkwijzer_leeftijd_18 == true){ ?>
+                    <!-- <img class="kijkwijzer" title="Gevaarlijk gedrag" src="../public/assets/img/icons/kijkwijzer/gevaarlijk-gedrag-4x.png"> -->
+                    <?php // } ?>
+                </div>          
             </div>
             <p class="release">Release: <!-- <?=$release ?> --></p>
             <p class="beschrijfing">In het 3D actie-spektakel Jurassic World: Fallen Kingdom keren favoriete personages terug en worden er nieuwe soorten dinosaurussen geïntroduceerd die nog angstaanjagender zijn dan ooit tevoren. Welkom in Jurassic World: Fallen Kingdom! Drie jaar geleden werd het themapark en luxeresort Jurassic World verwoest door losgebarsten dinosaurussen. Isla Nublar is nu een onbewoond eiland geworden waar de overgebleven dinosaurussen in de jungle aan hun lot overgelaten zijn. Wanneer de slapende vulkaan op het eiland weer actief wordt, dreigen de dinosaurussen opnieuw uit te sterven. Claire (Bryce Dallas Howard) zet alles op alles om dit te voorkomen. Ze weet Owen (Chris Pratt) over te halen om samen met haar en een team van specialisten terug te gaan naar Isla Nublar om te proberen de dinosaurussen te redden. Owen is vastbesloten om de vermiste raptor Blue, die hij van jongs af aan heeft getraind, te vinden. Als ze op het eiland arriveren blijkt de vulkaan die op uitbarsten staat niet hun grootste probleem te zijn. In dit nieuwe deel van één van de meest populaire en succesvolle filmreeksen ooit zullen Jeff Goldblum en BD Wong weer te zien zijn als Ian Malcolm en Dr. Henry Wu. De cast bestaat verder uit James Cromwell, Ted Levine, Justice Smith, Geraldine Chaplin, Daniella Pineda, Toby Jones en Rafe Spall. De regie is in handen van J.A. Bayona (The Impossible), en het scenario is geschreven door Colin Trevorrow en Derek Connolly, de regisseur en co-scenarist van Jurassic World. Steven Spielberg en Colin Trevorrow treden op als uitvoerend producenten namens Universal Pictures en Amblin Entertainment. Productie is in handen van Frank Marshall, Pat Crowley en Belén Atienza.<!-- <?=$Beschrijfing ?> --></p>
