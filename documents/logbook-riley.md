@@ -3,7 +3,8 @@
 ## Week 1
 
 ### 05/09/2024
-- #soon
+- Footer ready (1 hour)
+- Favicon not showing bug fix (1 hour)
 
 ### 04/09/2024
 - Header fully ready (1.5 hour)
