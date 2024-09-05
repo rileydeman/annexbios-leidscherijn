@@ -32,8 +32,6 @@ main {
       .moviesb {
         background-color: rgb(184, 123, 227);
         margin-top: 3%;
-
-        height: 200%;
       }
     }
   }
@@ -45,36 +43,17 @@ h2 {
   display: flex;
   text-align: left;
 }
+
+/* 353,16 hei all
+183,3 hei poster */
+
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 1%;
   grid-row-gap: 2.5%;
 }
-/* 771.84 all box 100%
-128.65 perbox 100%
-
-200px per poster
-
-1200px poster all
-
-0,6432
-128,64
-
-
-DOEN
-397px hei 1de
-337px hei 2de
-
-factor
-
-
-ECHT
-122.21 wi
-183.31 hei
-
-*/
 
 .mobox1,
 .mobox2,
@@ -94,8 +73,46 @@ ECHT
 .mobox16,
 .mobox17,
 .mobox18 {
-  background-color: blue;
-  aspect-ratio: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1.038 / 3;
+  background-color: #f0f0f0;
+}
+
+.poster {
+  background-color: bisque;
   width: 100%;
-  height: 72, 36px;
+  height: 51.9%;
+}
+.info-rect {
+  width: 100%;
+
+  background-color: #ddd;
+}
+.info-rect:nth-child(2) {
+  height: 11%;
+  background-color: blue;
+}
+
+.info-rect:nth-child(3) {
+  height: 6.5%;
+  background-color: green;
+}
+
+.info-rect:nth-child(4) {
+  height: 6.5%;
+  background-color: yellow;
+}
+
+.info-rect:nth-child(5) {
+  height: 15%;
+  background-color: purple;
+}
+
+.info-rect:nth-child(6) {
+  height: 9.2%;
+  background-color: orange;
+}
+.poster-foto {
+  width: 100%;
 }

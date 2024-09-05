@@ -47,24 +47,16 @@ include_once("../app/config/config.php");
      </div>
      <div class="moviesb">
      <div class="parent">
-<div class="mobox1"> </div>
-<div class="mobox2"> </div>
-<div class="mobox3"> </div>
-<div class="mobox4"> </div>
-<div class="mobox5"> </div>
-<div class="mobox6"> </div>
-<div class="mobox7"> </div>
-<div class="mobox8"> </div>
-<div class="mobox9"> </div>
-<div class="mobox10"> </div>
-<div class="mobox11"> </div>
-<div class="mobox12"> </div>
-<div class="mobox13"> </div>
-<div class="mobox14"> </div>
-<div class="mobox15"> </div>
-<div class="mobox16"> </div>
-<div class="mobox17"> </div>
-<div class="mobox18"> </div>
+    <?php for ($i = 1; $i <= 18; $i++): ?>
+        <div class="mobox<?= $i ?>">
+            <div class="poster">
+            <img class="poster-foto" src="../public/assets/img/poster2.png">
+            </div>
+            <?php for ($j = 1; $j <= 5; $j++): ?>
+                <div class="info-rect"></div>
+            <?php endfor; ?>
+        </div>
+    <?php endfor; ?>
 </div>
      </div>
     </div>
