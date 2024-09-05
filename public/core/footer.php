@@ -29,6 +29,18 @@
         </div>
         <div id="socials">
             <h3>Socials</h3>
+
+            <div id="footerSocialIcons">
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/facebook.png" alt="">
+                </a>
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/x.png" alt="">
+                </a>
+                <a href="/" class="social">
+                    <img src="<?= BASEURL ?>public/assets/img/icons/instagram.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
     <div id="right">
