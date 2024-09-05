@@ -12,9 +12,9 @@ include_once("../app/config/config.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Films Overview | AnnexBios Leidscherijn</title>
 
-    <link rel="icon" href="<?= BASEURL ?>favicon.ico">
-    <link rel="icon" href="<?= BASEURL ?>/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="<?= BASEURL ?>/favicon.png">
+    <!--    <link rel="icon" href="--><?php //= BASEURL ?><!--favicon.ico?v=--><?php //= time() ?><!--">-->
+    <!--    <link rel="icon" href="--><?php //= BASEURL ?><!--favicon.svg?v=--><?php //= time() ?><!--" type="image/svg+xml">-->
+    <!--    <link rel="apple-touch-icon" href="--><?php //= BASEURL ?><!--favicon.png?v=--><?php //= time() ?><!--">-->
 
     <!--    Linking of the css files-->
     <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/fonts.css">
