@@ -39,7 +39,7 @@ include_once("app/config/config.php");
     <div class="block1">
         <p class="welcome-text">Welkom bij AnnexBios Leidscherijn</p>
         <p class="introductie-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
-        <div class="draaiende-films-knop"><p class="draaiende-films-knop-text">BEKIJK DE DRAAIENDE FILMS</p></div>
+        <a href="/films"><div class="draaiende-films-knop"><p class="draaiende-films-knop-text">BEKIJK DE DRAAIENDE FILMS</p></div></a>
     </div>
     <div class="block2">
         <div class="left">
@@ -65,7 +65,7 @@ include_once("app/config/config.php");
         </div>
     </div>
     <div class="block3">
-        <div class="alle-films-knop" src="./public/film-overview.php"><p>BEKIJK ALLE FILMS</p></div>
+        <a href="/films"><div class="alle-films-knop" src="./public/film-overview.php"><p>BEKIJK ALLE FILMS</p></div></a>
     </div>
 </main>
 
