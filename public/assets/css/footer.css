@@ -66,7 +66,7 @@ footer {
                 height: 100%;
 
                 #footerSocialIcons {
-                    margin-top: 10%;
+                    margin-top: 8%;
                     display: flex;
                     justify-content: space-between;
 
@@ -107,5 +107,29 @@ footer {
 
     #bottom {
         background: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #content {
+            width: 80%;
+            padding: 1% 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                color: #FFFFFF;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+
+            .poweredByText {
+                color: var(--primary);
+            }
+        }
     }
 }
