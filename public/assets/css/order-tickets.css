@@ -219,18 +219,21 @@
                 border: 2px solid #4596BA;
 
                 .bestelling-box-left {
-                   .film-poster {
-                    max-width: 20%;
-                    height: auto;
-
+                    /* width: fit-content; */
                     margin-right: 5%;
+
+                   .film-poster {
+                        width: 20%;
+                        height: auto;
                     } 
                 }
                 .bestelling-box-right {
+                    width: 80%;
+
                     .film-title {
-                    margin-top: 3%;
-                    font-size: large;
-                    font-weight: bold;
+                        margin-top: 3%;
+                        font-size: large;
+                        font-weight: bold;
                     }
                     .film-kijkwijzers {
                         .kijkwijzer {
