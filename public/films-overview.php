@@ -46,19 +46,32 @@ include_once("../app/config/config.php");
      <div class="filterb">
      </div>
      <div class="moviesb">
-     <div class="parent">
-    <?php for ($i = 1; $i <= 18; $i++): ?>
-        <div class="mobox<?= $i ?>">
-            <div class="poster">
-            <img class="poster-foto" src="../public/assets/img/poster2.png">
+    <div class="parent">
+        <?php for ($i = 1; $i <= 18; $i++): ?>
+            <div class="mobox<?= $i ?>">
+                <div class="poster">
+                    <img class="poster-foto" src="../public/assets/img/poster.png">
+                </div>
+                <div class="info-rect">
+                    <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
+                </div>
+                <div class="info-rect">
+                <h3>*****</h3>
+                </div>
+                <div class="info-rect">
+                 <h3>Release: 7-06-2018</h3>
+                </div>
+                <div class="info-rect ">
+                <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
+                </div>
+                <div class="info-rect">
+                <h3>KNOP</h3>
+                </div>
             </div>
-            <?php for ($j = 1; $j <= 5; $j++): ?>
-                <div class="info-rect"></div>
-            <?php endfor; ?>
-        </div>
-    <?php endfor; ?>
+        <?php endfor; ?>
+    </div>
 </div>
-     </div>
+
     </div>
   </div>
 </main>
