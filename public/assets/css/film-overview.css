@@ -4,7 +4,7 @@ main {
     border: 1px solid rgb(0, 0, 0);
 
     .cropb {
-      background-color: lightblue;
+      background-color: rgb(0, 0, 0);
       margin-left: 10%;
       margin-top: 4%;
       margin-right: 5%;
@@ -25,13 +25,13 @@ main {
         }
       }
       .filterb {
-        background-color: rgb(227, 215, 123);
+        background-color: rgb(255, 255, 255);
         margin-top: 1%;
         height: 6%;
       }
       .moviesb {
-        background-color: rgb(184, 123, 227);
         margin-top: 3%;
+        padding-bottom: 5%;
       }
     }
   }
@@ -43,6 +43,13 @@ h2 {
   display: flex;
   text-align: left;
 }
+h3 {
+  font-family: lato;
+  font-weight: bold;
+  display: flex;
+  text-align: left;
+  color: #666666;
+}
 
 /* 353,16 hei all
 183,3 hei poster */
@@ -50,9 +57,10 @@ h2 {
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 1%;
   grid-row-gap: 2.5%;
+  width: 100%;
 }
 
 .mobox1,
@@ -75,44 +83,72 @@ h2 {
 .mobox18 {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 1.038 / 3;
-  background-color: #f0f0f0;
+  height: fit-content;
+  background-color: white;
 }
 
 .poster {
-  background-color: bisque;
   width: 100%;
   height: 51.9%;
 }
 .info-rect {
   width: 100%;
-
-  background-color: #ddd;
 }
 .info-rect:nth-child(2) {
-  height: 11%;
-  background-color: blue;
+  font-size: 1em;
+  padding: 5%;
 }
 
 .info-rect:nth-child(3) {
-  height: 6.5%;
-  background-color: green;
+  font-size: 1em;
+  letter-spacing: 8px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: yellow;
 }
 
 .info-rect:nth-child(4) {
-  height: 6.5%;
-  background-color: yellow;
+  font-size: 1em;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .info-rect:nth-child(5) {
-  height: 15%;
-  background-color: purple;
+  font-size: 0.6em;
+  padding: 5%;
 }
 
 .info-rect:nth-child(6) {
-  height: 9.2%;
-  background-color: orange;
+  padding: 5%;
 }
+
+.info-rect-fill-1 {
+  font-size: 1em;
+  padding: 5%;
+}
+
 .poster-foto {
   width: 100%;
 }
+
+/* .info-rect-fill-1 {
+  font-size: 1em;
+  padding: 5%;
+}
+.info-rect-fill-2 {
+  font-size: 1em;
+  letter-spacing: 10px;
+  padding: 5%;
+  color: yellow;
+}
+.info-rect-fill-3 {
+  font-size: 0.8em;
+  padding: 5%;
+}
+.info-rect-fill-4 {
+  font-size: 0.6em;
+  padding: 5%;
+}
+.info-rect-fill-5 {
+  padding: 5%;
+} */
