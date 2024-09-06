@@ -51,6 +51,6 @@
 <div id="bottom">
     <div id="content">
         <p><a href="/">Voorwaarden</a> | <a href="/">Privacy beleid</a> | <a href="/">Cookie disclaimer</a></p>
-        <p>&copy; 2024-<?= Date("Y") ?> AnnexBios // Powered by <a href="https://www.rileydeman.com/" class="poweredByText">rileydeman</a>, Jesse & Tristan</p>
+        <p>&copy; 2024-<?= Date("Y") ?> AnnexBios // Powered by <a href="https://www.rileydeman.com/" target="_blank" class="poweredByText">rileydeman</a>, Jesse & Tristan</p>
     </div>
 </div>
