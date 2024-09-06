@@ -47,8 +47,7 @@ include_once("app/config/config.php");
             <img class="locatie-view" src="https://placehold.co/450x200">
             <div class="info">
                 <div class="locatie">
-                    <img class="info-icon pin" src="./public/assets/img/icons/location.png">
-                    <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.087836981029!2d5.067164277188931!3d52.09633297195333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f909248f195%3A0x932a461dcd459ab9!2sBerlijnplein%20101%2C%20Utrecht!5e0!3m2!1sen!2snl!4v1725608716675!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
                 </div>
                 <div class="telefoon">
                     <img class="info-icon phone" src="./public/assets/img/icons/phone.png">
