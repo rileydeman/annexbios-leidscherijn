@@ -36,35 +36,58 @@ include_once("app/config/config.php");
 </header>
 
 <main>
-    <div class="block1">
-        <p class="welcome-text">Welkom bij AnnexBios Leidscherijn</p>
-        <p class="introductie-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
-        <a href="/films"><div class="draaiende-films-knop"><p class="draaiende-films-knop-text">BEKIJK DE DRAAIENDE FILMS</p></div></a>
-    </div>
-    <div class="block2">
-        <div class="left">
-            <!-- <iframe class="locatie-view" src="https://placehold.co/400x200"></iframe> -->
-            <img class="locatie-view" src="https://placehold.co/450x200">
-            <div class="info">
-                <div class="locatie">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.087836981029!2d5.067164277188931!3d52.09633297195333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f909248f195%3A0x932a461dcd459ab9!2sBerlijnplein%20101%2C%20Utrecht!5e0!3m2!1sen!2snl!4v1725608716675!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+    <div id="content">
+        <div id="welcome">
+            <h1>Welkom bij AnnexBios Leidscherijn</h1>
+            <p id="introduction">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+            <a id="filmsButton" href="<?= BASEURL ?>films">
+                <div id="innerButton">
+                    <p>BEKIJK DE DRAAIENDE FILMS</p>
                 </div>
-                <div class="telefoon">
-                    <img class="info-icon phone" src="./public/assets/img/icons/phone.png">
-                    <p>088 - 5152050</p>
-                </div>
-                <div class="bereikbaarheid">
-                    <p class="bereikbaarheid-hoofd"><b>BEREIKBAARHEID</b></p>
-                    <p class="bereikbaarheid-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+            </a>
+        </div>
+
+        <div id="location">
+            <div id="locLeft">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.087836981029!2d5.067164277188931!3d52.09633297195333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f909248f195%3A0x932a461dcd459ab9!2sBerlijnplein%20101%2C%20Utrecht!5e0!3m2!1sen!2snl!4v1725608716675!5m2!1sen!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="locationInfo">
+                    <div id="address" class="locInfoItem">
+                        <img src="<?= BASEURL ?>public/assets/img/icons/location-marker.png" alt="">
+                        <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+                    </div>
+                    <div id="phone" class="locInfoItem">
+                        <img src="<?= BASEURL ?>public/assets/img/icons/phone-call.png" alt="">
+                        <p>020-12345678</p>
+                    </div>
+                    <div id="accessibility">
+                        <p id="title">BEREIKBAARHEID</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+                    </div>
                 </div>
             </div>
+            <div id="locRight">
+                <img src="<?= BASEURL ?>public/assets/img/LRC-bios-2.png" alt="">
+            </div>
         </div>
-        <div class="right">
-            <img class="bios-foto" src="./public/assets/img/LRC-bios-2.png">
+
+        <div id="films">
+            <div id="head">
+                <div id="title">
+                    <h2>FILM AGENDA</h2>
+                </div>
+                <div id="filters">
+                    <img id="filtersIcon" src="<?= BASEURL ?>public/assets/img/icons/settings-sliders.png" alt="">
+                </div>
+            </div>
+            <div id="repeater"></div>
+            <div id="foot">
+                <a href="<?= BASEURL ?>films" id="viewMoreFilmsBtn">
+                    <div id="innerBtn">
+                        <p>BEKIJK ALLE FILMS</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="block3">
-        <a href="/films"><div class="alle-films-knop" src="./public/film-overview.php"><p>BEKIJK ALLE FILMS</p></div></a>
     </div>
 </main>
 

@@ -2,6 +2,10 @@
 
 ## Week 1
 
+### 06/09/2024
+- Updated trello board (0.25 hours)
+- Start at homepage revise {at around 75%} (1.75 hours)
+
 ### 05/09/2024
 - Footer ready (1 hour)
 - Favicon not showing bug fix (1 hour)
