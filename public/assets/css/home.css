@@ -134,7 +134,7 @@ main {
 
                     #filtersIcon {
                         aspect-ratio: 1/1;
-                        width: 7%;
+                        width: 6.5%;
                     }
                 }
             }
@@ -164,32 +164,5 @@ main {
                 }
             }
         }
-    }
-}
-
-.block3 {
-    background-color: white;
-
-    width: 90%;
-    height: fit-content;
-
-    margin-top: 4%;
-    margin-left: 5%;
-    padding: 25px;
-
-    .alle-films-knop {
-        background-color: #4596BA;
-        color: white;
-
-        width: 200px;
-        height: 50px;
-
-        padding-left: 5px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        /* font-weight: bold; */
     }
 }
