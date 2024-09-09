@@ -17,16 +17,16 @@ include_once("app/config/config.php");
 <!--    <link rel="apple-touch-icon" href="--><?php //= BASEURL ?><!--favicon.png?v=--><?php //= time() ?><!--">-->
 
 <!--    Linking of the css files-->
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/fonts.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/style.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/home.css">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/fonts.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/header.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/footer.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/home.css?v=<?= time() ?>">
 
 <!--    Linking of the javascript files, defer = reading/link the file at last-->
-    <script defer src="<?= BASEURL ?>public/assets/js/app.js"></script>
-    <script defer src="<?= BASEURL ?>public/assets/js/header.js"></script>
-    <script defer src="<?= BASEURL ?>public/assets/js/movie-filters.js"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/movie-filters.js?v=<?= time() ?>"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@ include_once("app/config/config.php");
 
         <div id="location">
             <div id="locLeft">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.087836981029!2d5.067164277188931!3d52.09633297195333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f909248f195%3A0x932a461dcd459ab9!2sBerlijnplein%20101%2C%20Utrecht!5e0!3m2!1sen!2snl!4v1725608716675!5m2!1sen!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.087836981029!2d5.067164277188931!3d52.09633297195333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f909248f195%3A0x932a461dcd459ab9!2sBerlijnplein%20101%2C%20Utrecht!5e0!3m2!1sen!2snl!4v1725608716675!5m2!1sen!2snl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div id="locationInfo">
                     <div id="address" class="locInfoItem">
                         <img src="<?= BASEURL ?>public/assets/img/icons/location-marker.png" alt="">
@@ -80,7 +80,7 @@ include_once("app/config/config.php");
                     <img id="filtersIcon" src="<?= BASEURL ?>public/assets/img/icons/settings-sliders.png" alt="">
                     <form action="">
                         <div class="input">
-                            <input type="radio" name="filter" id="movies">
+                            <input type="radio" name="filter" id="movies" checked>
                             <label for="movies">FILMS</label>
                         </div>
                         <div class="input">

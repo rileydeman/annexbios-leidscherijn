@@ -57,6 +57,7 @@ main {
                 iframe {
                     width: 100%;
                     aspect-ratio: 16/8;
+                    border: 0;
                 }
 
                 #locationInfo {
@@ -155,7 +156,22 @@ main {
                             border: 2px solid var(--primary);
 
                             input[type="radio"] {
+                                appearance: none;
+                                -webkit-appearance: none;
+                                border-radius: 50%;
+                                aspect-ratio: 1/1;
+                                width: 15px;
                                 margin-right: 2.5%;
+                                outline: none;
+                                border: 2px solid var(--primary);
+
+                                &:hover {
+                                    border-color: #000000;
+                                }
+
+                                &:checked {
+                                    background-color: var(--primary);
+                                }
                             }
 
                             label {
@@ -184,7 +200,22 @@ main {
                                 align-items: center;
 
                                 input[type="radio"] {
+                                    appearance: none;
+                                    -webkit-appearance: none;
+                                    border-radius: 50%;
+                                    aspect-ratio: 1/1;
+                                    width: 15px;
                                     margin-right: 2.5%;
+                                    outline: none;
+                                    border: 2px solid var(--primary);
+
+                                    &:hover {
+                                        border-color: #000000;
+                                    }
+
+                                    &:checked {
+                                        background-color: var(--primary);
+                                    }
                                 }
 
                                 label {
@@ -233,6 +264,23 @@ main {
                                     font-family: lato;
                                     color: var(--primary);
                                     width: 100%;
+                                }
+
+                                input[type="checkbox"] {
+                                    appearance: none;
+                                    -webkit-appearance: none;
+                                    aspect-ratio: 1/1;
+                                    width: 15px;
+                                    margin-right: 2.5%;
+                                    border: 2px solid var(--primary);
+
+                                    &:hover {
+                                        border-color: #000000;
+                                    }
+
+                                    &:checked {
+                                        background-color: var(--primary);
+                                    }
                                 }
                             }
                         }
