@@ -86,6 +86,14 @@ include_once("../app/config/config.php");
             </div>
             <div class="stap-4">
                 <div><p class="stap-4-title">STAP 4: VUL JE GEGEVENS IN</p></div>
+                <div class="gegevens-invullen">
+                    <input class="gegevens-input vn-input" type="text" placeholder="Voornaam">
+                    <input class="gegevens-input an-input" type="text" placeholder="Achternaam*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                </div>
             </div>
         </div>
         <div class="film-card">

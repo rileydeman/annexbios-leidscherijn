@@ -258,7 +258,38 @@
 
                 margin-bottom: 2%;
             }
+            .gegevens-invullen {
+                color: gray;
+
+                width: 60%;
+                height: fit-content;
+
+                /* display: flex; */
+                .gegevens-input {
+                    margin-bottom: 1%;
+                    padding: 2%;
+
+                    border: 2px solid #399CFF;
+                }
+                .vn-input {
+                    width: 49%;
+                    margin-right: 1%;
+
+                    font-size: small;
+                }
+                .an-input {
+                    width: 49%;
+
+                    font-size: small;
+                }
+                .email-input {
+                    width: 100%;
+
+                    font-size: small;
+                }
+            }
         }
+        
     }
 
     .film-card {
