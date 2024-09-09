@@ -289,13 +289,93 @@
                 }
             }
         }
-        
+        .stap-5 {
+            margin-top: 4%;
+
+            .stap-5-title {
+                color: #6E4F7D;
+
+                font-size: larger;
+                font-weight: bold;
+
+                margin-bottom: 2%;
+            }
+            .betaalwijzes {
+                width: 100%;
+                display: flex;
+
+                .betaalwijze {
+                    width: 30%;
+
+                    .betaalwijze-checkbox {
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #399CFF;
+                        border-radius: 0%;
+                        background-color: #399CFF;
+                    }
+                    
+                    .betaalwijze-img {
+                        width: 30%;
+                    }
+                }
+            }
+            .avv {
+                color: #666666;
+
+                display: flex;
+                .avv-checkbox {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid #399CFF;
+                    border-radius: 0%;
+                }
+                .avv-text {
+                    margin-left: 2%;
+                    .avv-link {
+                        color: #666666;
+
+                        font-size: smaller;
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+        }
+
     }
 
     .film-card {
         background-color: white;
 
         width: 20%;
-        height: 100px;
+        height: fit-content;
+
+        .poster {
+            width: 100%;
+            height: auto;
+        }
     }
+
+    
 }
+.afrekenen {
+        background-color: #4596BA;
+        color: white;
+
+        width: 62%;
+        height: 100px;
+
+        margin-top: 2%;
+        margin-left: -7.5%;
+        margin-bottom: 5%;
+
+        padding: 2%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: xx-large;
+        font-weight: bold;
+    }

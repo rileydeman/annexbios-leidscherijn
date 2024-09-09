@@ -95,14 +95,26 @@ include_once("../app/config/config.php");
                     <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
                 </div>
             </div>
+            <div class="stap-5">
+                <div><p class="stap-5-title">STAP 5: KIES JE BETAALWIJZE</p></div>
+                <div class="betaalwijzes">
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img nbb" src="../public/assets/img/nbb.png"></div>
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img maestro" src="../public/assets/img/maestro.png"></div>
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img ideal" src="../public/assets/img/ideal.png"></div>
+                </div>
+                <div class="avv"><input class="avv-checkbox" type="checkbox"><p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p></div>
+            </div>
+
         </div>
         <div class="film-card">
-            <div class="poster"></div>
-            <p class="title"></p>
+            <div class="poster"><img class="poster" src="../public/assets/img/poster.png"></div>
+            <p class="title">JURASSIC WORLD: FALLEN KINGDOM </p>
             <div class="beoordeling"></div>
+            <p class="release"></p>
             <p class="summary"></p>
         </div>
     </div>
+    <div class="afrekenen"><p>AFREKENEN</p></div>
 </main>
 
 <footer>
