@@ -17,15 +17,15 @@ include_once("../app/config/config.php");
     <!--    <link rel="apple-touch-icon" href="--><?php //= BASEURL ?><!--favicon.png?v=--><?php //= time() ?><!--">-->
 
     <!--    Linking of the css files-->
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/fonts.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/style.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/film-detail.css">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/fonts.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/header.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/footer.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= BASEURL ?>public/assets/css/film-detail.css?v=<?= time() ?>">
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
-    <script defer src="<?= BASEURL ?>public/assets/js/app.js"></script>
-    <script defer src="<?= BASEURL ?>public/assets/js/header.js"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
 
 </head>
 
