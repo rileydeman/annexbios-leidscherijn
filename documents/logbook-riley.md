@@ -1,5 +1,11 @@
 # Logboek Riley de Man
 
+## Week 2
+
+### 09/09/2024
+- Filter options + styling for the movies at the home (2 hours)
+- Merging some branches (0.25 hours)
+
 ## Week 1
 
 ### 06/09/2024
