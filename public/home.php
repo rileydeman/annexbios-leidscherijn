@@ -26,6 +26,7 @@ include_once("app/config/config.php");
 <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/movie-filters.js"></script>
 </head>
 
 <body>
@@ -77,6 +78,44 @@ include_once("app/config/config.php");
                 </div>
                 <div id="filters">
                     <img id="filtersIcon" src="<?= BASEURL ?>public/assets/img/icons/settings-sliders.png" alt="">
+                    <form action="">
+                        <div class="input">
+                            <input type="radio" name="filter" id="movies">
+                            <label for="movies">FILMS</label>
+                        </div>
+                        <div class="input">
+                            <input type="radio" name="filter" id="thisWeek">
+                            <label for="thisWeek">DEZE WEEK</label>
+                        </div>
+                        <div class="input">
+                            <input type="radio" name="filter" id="today">
+                            <label for="today">VANDAAG</label>
+                        </div>
+                        <div id="movieFilterSelect">
+                            <div id="categoryInput">
+                                <input type="radio" name="filter" id="category">
+                                <label for="category">CATEGORIE</label>
+                            </div>
+
+                            <div id="movieFilterSelectArrowBox">
+                                <img src="<?= BASEURL ?>public/assets/img/icons/angle-down-primary.png" id="movieFilterSelectArrow" alt="">
+                            </div>
+
+                            <div id="movieCatOptions">
+                                <input type="checkbox" name="movieCat" id="horror" value="horror">
+                                <label for="horror">HORROR</label>
+                                <br>
+                                <input type="checkbox" name="movieCat" id="actie" value="actie">
+                                <label for="actie">ACTIE</label>
+                                <br>
+                                <input type="checkbox" name="movieCat" id="kids" value="kids">
+                                <label for="kids">KIDS</label>
+                                <br>
+                            </div>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
             <div id="repeater"></div>
