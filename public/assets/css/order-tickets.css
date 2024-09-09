@@ -347,13 +347,39 @@
 
     .film-card {
         background-color: white;
+        color: #666666;
 
         width: 20%;
         height: fit-content;
 
-        .poster {
+        .card-poster {
             width: 100%;
             height: auto;
+        }
+        .card-title {
+            margin-top: 5%;
+            margin-left: 5%;
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            font-size: large;
+            font-weight: bold;
+        }
+        .card-beoordeling {
+            margin-top: 5%;
+            margin-left: 5%;
+
+            display: flex;
+        }
+        .card-release {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        .card-summary {
+            margin-top: 5%;
+            margin-left: 5%;
         }
     }
 

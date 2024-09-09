@@ -107,11 +107,11 @@ include_once("../app/config/config.php");
 
         </div>
         <div class="film-card">
-            <div class="poster"><img class="poster" src="../public/assets/img/poster.png"></div>
-            <p class="title">JURASSIC WORLD: FALLEN KINGDOM </p>
-            <div class="beoordeling"></div>
-            <p class="release"></p>
-            <p class="summary"></p>
+            <div class="poster"><img class="card-poster" src="../public/assets/img/poster.png"></div>
+            <p class="card-title">JURASSIC WORLD: FALLEN KINGDOM </p>
+            <div class="card-beoordeling"><img class="sterren" src="https://placehold.co/30x30"><img class="sterren" src="https://placehold.co/30x30"></div>
+            <p class="card-release">Release: 7-06-2018</p>
+            <p class="card-summary">Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</p>
         </div>
     </div>
     <div class="afrekenen"><p>AFREKENEN</p></div>
