@@ -219,11 +219,11 @@
                 border: 2px solid #4596BA;
 
                 .bestelling-box-left {
-                    /* width: fit-content; */
-                    margin-right: 5%;
+                    width: 20%;
+                    margin-right: 3%;
 
                    .film-poster {
-                        width: 20%;
+                        width: 100%;
                         height: auto;
                     } 
                 }
@@ -241,15 +241,167 @@
                             height: auto;
                         }
                     }
+                    .bestelling-info {
+                        font-size: small;
+                    }
                 }
             }
         }
+        .stap-4 {
+            margin-top: 4%;
+
+            .stap-4-title {
+                color: #399CFF;
+
+                font-size: larger;
+                font-weight: bold;
+
+                margin-bottom: 2%;
+            }
+            .gegevens-invullen {
+                color: gray;
+
+                width: 60%;
+                height: fit-content;
+
+                /* display: flex; */
+                .gegevens-input {
+                    margin-bottom: 1%;
+                    padding: 2%;
+
+                    border: 2px solid #399CFF;
+                }
+                .vn-input {
+                    width: 49%;
+                    margin-right: 1%;
+
+                    font-size: small;
+                }
+                .an-input {
+                    width: 49%;
+
+                    font-size: small;
+                }
+                .email-input {
+                    width: 100%;
+
+                    font-size: small;
+                }
+            }
+        }
+        .stap-5 {
+            margin-top: 4%;
+
+            .stap-5-title {
+                color: #6E4F7D;
+
+                font-size: larger;
+                font-weight: bold;
+
+                margin-bottom: 2%;
+            }
+            .betaalwijzes {
+                width: 100%;
+                display: flex;
+
+                .betaalwijze {
+                    width: 30%;
+
+                    .betaalwijze-checkbox {
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #399CFF;
+                        border-radius: 0%;
+                        background-color: #399CFF;
+                    }
+                    
+                    .betaalwijze-img {
+                        width: 30%;
+                    }
+                }
+            }
+            .avv {
+                color: #666666;
+
+                display: flex;
+                .avv-checkbox {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid #399CFF;
+                    border-radius: 0%;
+                }
+                .avv-text {
+                    margin-left: 2%;
+                    .avv-link {
+                        color: #666666;
+
+                        font-size: smaller;
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+        }
+
     }
 
     .film-card {
         background-color: white;
+        color: #666666;
 
         width: 20%;
-        height: 100px;
+        height: fit-content;
+
+        .card-poster {
+            width: 100%;
+            height: auto;
+        }
+        .card-title {
+            margin-top: 5%;
+            margin-left: 5%;
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            font-size: large;
+            font-weight: bold;
+        }
+        .card-beoordeling {
+            margin-top: 5%;
+            margin-left: 5%;
+
+            display: flex;
+        }
+        .card-release {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        .card-summary {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
     }
+
+    
 }
+.afrekenen {
+        background-color: #4596BA;
+        color: white;
+
+        width: 62%;
+        height: 100px;
+
+        margin-top: 2%;
+        margin-left: -7.5%;
+        margin-bottom: 5%;
+
+        padding: 2%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: xx-large;
+        font-weight: bold;
+    }

@@ -73,17 +73,48 @@ include_once("../app/config/config.php");
                             <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
                             <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
                         </div>
+                        <div class="bestelling-info">
+                            <p><b>Bioscoop:</b></p>
+                            <p><b>Wanneer:</b></p>
+                            <p><b>Stoelen:</b></p>
+                            <p><b>Tickets:</b></p>
+                            <br>
+                            <p><b>Totaal # ticket:</b></p>
+                        </div>
                     </div> 
                 </div>
             </div>
+            <div class="stap-4">
+                <div><p class="stap-4-title">STAP 4: VUL JE GEGEVENS IN</p></div>
+                <div class="gegevens-invullen">
+                    <input class="gegevens-input vn-input" type="text" placeholder="Voornaam">
+                    <input class="gegevens-input an-input" type="text" placeholder="Achternaam*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                </div>
+            </div>
+            <div class="stap-5">
+                <div><p class="stap-5-title">STAP 5: KIES JE BETAALWIJZE</p></div>
+                <div class="betaalwijzes">
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img nbb" src="../public/assets/img/nbb.png"></div>
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img maestro" src="../public/assets/img/maestro.png"></div>
+                    <div class="betaalwijze"><input class="betaalwijze-checkbox" type="checkbox"><img class="betaalwijze-img ideal" src="../public/assets/img/ideal.png"></div>
+                </div>
+                <div class="avv"><input class="avv-checkbox" type="checkbox"><p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p></div>
+            </div>
+
         </div>
         <div class="film-card">
-            <div class="poster"></div>
-            <p class="title"></p>
-            <div class="beoordeling"></div>
-            <p class="summary"></p>
+            <div class="poster"><img class="card-poster" src="../public/assets/img/poster.png"></div>
+            <p class="card-title">JURASSIC WORLD: FALLEN KINGDOM </p>
+            <div class="card-beoordeling"><img class="sterren" src="https://placehold.co/30x30"><img class="sterren" src="https://placehold.co/30x30"></div>
+            <p class="card-release">Release: 7-06-2018</p>
+            <p class="card-summary">Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</p>
         </div>
     </div>
+    <div class="afrekenen"><p>AFREKENEN</p></div>
 </main>
 
 <footer>
