@@ -73,8 +73,19 @@ include_once("../app/config/config.php");
                             <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
                             <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
                         </div>
+                        <div class="bestelling-info">
+                            <p><b>Bioscoop:</b></p>
+                            <p><b>Wanneer:</b></p>
+                            <p><b>Stoelen:</b></p>
+                            <p><b>Tickets:</b></p>
+                            <br>
+                            <p><b>Totaal # ticket:</b></p>
+                        </div>
                     </div> 
                 </div>
+            </div>
+            <div class="stap-4">
+                <div><p class="stap-4-title">STAP 4: VUL JE GEGEVENS IN</p></div>
             </div>
         </div>
         <div class="film-card">
