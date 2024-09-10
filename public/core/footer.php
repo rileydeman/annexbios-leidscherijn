@@ -2,8 +2,8 @@
     <div id="left">
         <div id="info">
             <img src="<?= BASEURL ?>public/assets/img/AnnexBios-logo.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetuer <br> adipiscing elit. Aenean commodo ligula <br> eget dolor. Aenean massa. Cum sociis
-                <br> natoque penatibus et magnis dis parturient <br> montes, nascetur ridiculus mus. Donec quam felis,</p>
+            <p>AnnexBios Leidsche Rijn is een moderne   <br> en sfeervolle bioscoop gelegen aan het <br> Berlijnplein in Utrecht. Met de nieuwste 
+                <br> technologie op het gebied van beeld en <br>  geluid biedt AnnexBios een ultieme filmervaring,</p>
             <a href="" id="footerButtonA">
                 <div id="footerButton">
                     <p>LEES MEER</p>

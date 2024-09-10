@@ -1,317 +1,395 @@
 main {
-    padding-top: 7.5% !important;
+  padding-top: 7.5% !important;
 
-    #content {
-        #welcome {
-            background-color: var(--primary);
-            width: 100%;
-            padding: 2%;
-            margin-bottom: 2.5%;
+  #content {
+    #welcome {
+      background-color: var(--primary);
+      width: 100%;
+      padding: 2%;
+      margin-bottom: 2.5%;
 
-            h1 {
-                margin-bottom: 2.5%;
-            }
+      h1 {
+        margin-bottom: 2.5%;
+      }
 
-            #introduction {
-                max-width: 50%;
-                margin-bottom: 1.75%;
-            }
+      #introduction {
+        max-width: 50%;
+        margin-bottom: 1.75%;
+      }
 
-            #filmsButton {
-                width: fit-content;
+      #filmsButton {
+        width: fit-content;
 
-                #innerButton {
-                    background-color: #FFFFFF;
-                    width: fit-content;
-                    padding: 1%;
+        #innerButton {
+          background-color: #ffffff;
+          width: fit-content;
+          padding: 1%;
 
-                    p {
-                        color: var(--primary);
-                    }
-                }
-
-                &:hover {
-                    #innerButton {
-                        background-color: #76BBD953;
-
-                        p {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
+          p {
+            color: var(--primary);
+          }
         }
 
-        #location {
+        &:hover {
+          #innerButton {
+            background-color: #76bbd953;
+
+            p {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    #location {
+      width: 100%;
+      margin-top: 2.5%;
+      display: flex;
+      padding: 2%;
+      justify-content: space-between;
+      background-color: #ffffff;
+      height: fit-content;
+
+      #locLeft {
+        width: 49%;
+
+        iframe {
+          width: 100%;
+          aspect-ratio: 16/8;
+          border: 0;
+        }
+
+        #locationInfo {
+          background-color: var(--primary);
+          padding: 3%;
+
+          .locInfoItem {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            img {
+              aspect-ratio: 1/1;
+              width: 5%;
+              margin-right: 2%;
+              flex-shrink: 0;
+            }
+          }
+
+          #address {
+            margin-bottom: 2.5%;
+          }
+
+          #phone {
+            margin-top: 2.5%;
+          }
+
+          #accessibility {
             width: 100%;
             margin-top: 2.5%;
+
+            #title {
+              font-weight: bold;
+              margin-bottom: 1%;
+            }
+          }
+        }
+      }
+
+      #locRight {
+        width: 49%;
+        background-color: #ff0000;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    #films {
+      margin-top: 10%;
+
+      #head {
+        width: 100%;
+
+        #title {
+          padding: 2%;
+          background-color: #ffffff;
+          width: 50%;
+
+          h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+          }
+        }
+
+        #filters {
+          width: 50%;
+          padding: 1% 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          #filtersIcon {
+            aspect-ratio: 1/1;
+            width: 6.5%;
+          }
+
+          form {
+            width: 100%;
+            height: 100%;
             display: flex;
-            padding: 2%;
             justify-content: space-between;
-            background-color: #FFFFFF;
-            height: fit-content;
+            padding: 0 0 0 2.5%;
 
-            #locLeft {
-                width: 49%;
+            .input {
+              background-color: #ffffff;
+              padding: 2%;
+              /*width: 24%;*/
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 2px solid var(--primary);
 
-                iframe {
-                    width: 100%;
-                    aspect-ratio: 16/8;
-                    border: 0;
+              input[type="radio"] {
+                appearance: none;
+                -webkit-appearance: none;
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                width: 15px;
+                margin-right: 2.5%;
+                outline: none;
+                border: 2px solid var(--primary);
+
+                &:hover {
+                  border-color: #000000;
                 }
 
-                #locationInfo {
-                    background-color: var(--primary);
-                    padding: 3%;
-
-                    .locInfoItem {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-
-                        img {
-                            aspect-ratio: 1/1;
-                            width: 5%;
-                            margin-right: 2%;
-                            flex-shrink: 0;
-                        }
-                    }
-
-                    #address {
-                        margin-bottom: 2.5%;
-                    }
-
-                    #phone {
-                        margin-top: 2.5%;
-                    }
-
-                    #accessibility {
-                        width: 100%;
-                        margin-top: 2.5%;
-
-                        #title {
-                            font-weight: bold;
-                            margin-bottom: 1%;
-                        }
-                    }
+                &:checked {
+                  background-color: var(--primary);
                 }
+              }
+
+              label {
+                font-family: lato;
+                font-weight: bold;
+                color: var(--primary);
+                flex-shrink: 0;
+              }
             }
 
-            #locRight {
-                width: 49%;
-                background-color: #FF0000;
+            #movieFilterSelect {
+              position: relative;
+              background-color: #ffffff;
+              border: 2px solid var(--primary);
+              min-width: 40%;
+
+              #categoryInput {
+                position: absolute;
+                top: 0;
+                left: 2%;
+
+                padding: 2%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input[type="radio"] {
+                  appearance: none;
+                  -webkit-appearance: none;
+                  border-radius: 50%;
+                  aspect-ratio: 1/1;
+                  width: 15px;
+                  margin-right: 2.5%;
+                  outline: none;
+                  border: 2px solid var(--primary);
+
+                  &:hover {
+                    border-color: #000000;
+                  }
+
+                  &:checked {
+                    background-color: var(--primary);
+                  }
+                }
+
+                label {
+                  font-family: lato;
+                  font-weight: bold;
+                  color: var(--primary);
+                  flex-shrink: 0;
+                }
+              }
+
+              #movieFilterSelectArrowBox {
+                position: absolute;
+                top: 50%;
+                right: -5%;
+                transform: translate(-50%, -50%);
+
+                /*background-color: #FF0000;*/
+                aspect-ratio: 1/1;
+                height: 75%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                  aspect-ratio: 1/1;
+                  width: 75%;
+                  transition: 0.5s ease;
                 }
+              }
+
+              #movieCatOptions {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                background-color: #ffffff;
+                border: 0 solid var(--primary);
+                overflow: hidden;
+                max-height: 0;
+                transition: 0.5s ease;
+                padding: 0 0 0 2.5%;
+
+                label {
+                  font-family: lato;
+                  color: var(--primary);
+                  width: 100%;
+                }
+
+                input[type="checkbox"] {
+                  appearance: none;
+                  -webkit-appearance: none;
+                  aspect-ratio: 1/1;
+                  width: 15px;
+                  margin-right: 2.5%;
+                  border: 2px solid var(--primary);
+
+                  &:hover {
+                    border-color: #000000;
+                  }
+
+                  &:checked {
+                    background-color: var(--primary);
+                  }
+                }
+              }
             }
+          }
+        }
+        .parent {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 1%;
+          grid-row-gap: 2.5%;
+          width: 100%;
+          margin-bottom: 5%;
         }
 
-        #films {
-            margin-top: 10%;
-
-            #head {
-                width: 100%;
-
-                #title {
-                    padding: 2%;
-                    background-color: #FFFFFF;
-                    width: 50%;
-
-                    h2 {
-                        color: var(--primary);
-                        font-size: 2.5rem;
-                    }
-                }
-
-                #filters {
-                    width: 50%;
-                    padding: 1% 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    #filtersIcon {
-                        aspect-ratio: 1/1;
-                        width: 6.5%;
-                    }
-
-                    form {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 0 0 0 2.5%;
-
-                        .input {
-                            background-color: #FFFFFF;
-                            padding: 2%;
-                            /*width: 24%;*/
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            border: 2px solid var(--primary);
-
-                            input[type="radio"] {
-                                appearance: none;
-                                -webkit-appearance: none;
-                                border-radius: 50%;
-                                aspect-ratio: 1/1;
-                                width: 15px;
-                                margin-right: 2.5%;
-                                outline: none;
-                                border: 2px solid var(--primary);
-
-                                &:hover {
-                                    border-color: #000000;
-                                }
-
-                                &:checked {
-                                    background-color: var(--primary);
-                                }
-                            }
-
-                            label {
-                                font-family: lato;
-                                font-weight: bold;
-                                color: var(--primary);
-                                flex-shrink: 0;
-                            }
-                        }
-
-                        #movieFilterSelect {
-                            position: relative;
-                            background-color: #FFFFFF;
-                            border: 2px solid var(--primary);
-                            min-width: 40%;
-
-                            #categoryInput {
-                                position: absolute;
-                                top: 0;
-                                left: 2%;
-
-                                padding: 2%;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                                input[type="radio"] {
-                                    appearance: none;
-                                    -webkit-appearance: none;
-                                    border-radius: 50%;
-                                    aspect-ratio: 1/1;
-                                    width: 15px;
-                                    margin-right: 2.5%;
-                                    outline: none;
-                                    border: 2px solid var(--primary);
-
-                                    &:hover {
-                                        border-color: #000000;
-                                    }
-
-                                    &:checked {
-                                        background-color: var(--primary);
-                                    }
-                                }
-
-                                label {
-                                    font-family: lato;
-                                    font-weight: bold;
-                                    color: var(--primary);
-                                    flex-shrink: 0;
-                                }
-                            }
-
-                            #movieFilterSelectArrowBox {
-                                position: absolute;
-                                top: 50%;
-                                right: -5%;
-                                transform: translate(-50%, -50%);
-
-                                /*background-color: #FF0000;*/
-                                aspect-ratio: 1/1;
-                                height: 75%;
-
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                                img {
-                                    aspect-ratio: 1/1;
-                                    width: 75%;
-                                    transition: .5s ease;
-                                }
-                            }
-
-                            #movieCatOptions {
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                width: 100%;
-                                z-index: 1;
-                                background-color: #FFFFFF;
-                                border: 0 solid var(--primary);
-                                overflow: hidden;
-                                max-height: 0;
-                                transition: .5s ease;
-                                padding: 0 0 0 2.5%;
-
-                                label {
-                                    font-family: lato;
-                                    color: var(--primary);
-                                    width: 100%;
-                                }
-
-                                input[type="checkbox"] {
-                                    appearance: none;
-                                    -webkit-appearance: none;
-                                    aspect-ratio: 1/1;
-                                    width: 15px;
-                                    margin-right: 2.5%;
-                                    border: 2px solid var(--primary);
-
-                                    &:hover {
-                                        border-color: #000000;
-                                    }
-
-                                    &:checked {
-                                        background-color: var(--primary);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            #foot {
-                padding: 2% 0;
-                width: 100%;
-
-                #viewMoreFilmsBtn {
-                    #innerBtn {
-                        background-color: var(--primary);
-                        width: fit-content;
-                        padding: 1% 2.5%;
-
-                         p {
-                            color: #FFFFFF;
-                         }
-
-                        &:hover {
-                            background-color: #FFFFFF;
-
-                            p {
-                                color: var(--primary);
-                            }
-                        }
-                    }
-                }
-            }
+        .mobox1,
+        .mobox2,
+        .mobox3,
+        .mobox4,
+        .mobox5,
+        .mobox6,
+        .mobox7,
+        .mobox8,
+        .mobox9,
+        .mobox10,
+        .mobox11,
+        .mobox12 {
+          display: flex;
+          flex-direction: column;
+          height: fit-content;
+          background-color: white;
         }
+
+        .poster {
+          width: 100%;
+          height: 51.9%;
+        }
+        .info-rect {
+          width: 100%;
+        }
+        .info-rect:nth-child(2) {
+          font-size: 1em;
+          padding: 5%;
+        }
+
+        .info-rect:nth-child(3) {
+          font-size: 1em;
+          letter-spacing: 8px;
+          padding-left: 5%;
+          padding-right: 5%;
+          color: yellow;
+        }
+
+        .info-rect:nth-child(4) {
+          font-size: 1em;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        .info-rect:nth-child(5) {
+          font-size: 0.6em;
+          padding: 5%;
+        }
+
+        .info-rect:nth-child(6) {
+          padding: 5%;
+        }
+
+        .info-rect-fill-1 {
+          font-size: 1em;
+          padding: 5%;
+        }
+
+        .poster-foto {
+          width: 100%;
+        }
+        h3 {
+          font-family: lato;
+          font-weight: bold;
+          display: flex;
+          text-align: left;
+          color: #666666;
+        }
+      }
+
+      #foot {
+        padding: 2% 0;
+        width: 100%;
+
+        #viewMoreFilmsBtn {
+          #innerBtn {
+            background-color: var(--primary);
+            width: fit-content;
+            padding: 1% 2.5%;
+
+            p {
+              color: #ffffff;
+            }
+
+            &:hover {
+              background-color: #ffffff;
+
+              p {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
