@@ -40,7 +40,7 @@ include_once("app/config/config.php");
     <div id="content">
         <div id="welcome">
             <h1>Welkom bij AnnexBios Leidscherijn</h1>
-            <p id="introduction">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+            <p id="introduction">AnnexBios Leidsche Rijn is gevestigd op Berlijnplein 101, 3541 CM Utrecht. Bekijk de locatie op de kaart en ontdek de handige parkeermogelijkheden. De bioscoop is goed bereikbaar met zowel de auto als het openbaar vervoer. Kaartjes koop je op deze website of aan de kassa.</p>
             <a id="filmsButton" href="<?= BASEURL ?>films">
                 <div id="innerButton">
                     <p>BEKIJK DE DRAAIENDE FILMS</p>
@@ -62,7 +62,7 @@ include_once("app/config/config.php");
                     </div>
                     <div id="accessibility">
                         <p id="title">BEREIKBAARHEID</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient</p>
+                        <p>AnnexBios Leidsche Rijn is telefonisch bereikbaar tijdens openingstijden, meestal vanaf een half uur voor de eerste film tot een half uur na de laatste voorstelling. Voor actuele tijden en vragen kun je het beste de website raadplegen of direct contact opnemen.</p>
                     </div>
                 </div>
             </div>
@@ -117,6 +117,31 @@ include_once("app/config/config.php");
                     </form>
 
                 </div>
+                <div class="moviesb">
+    <div class="parent">
+        <?php for ($i = 1; $i <= 12; $i++): ?>
+            <div class="mobox<?= $i ?>">
+                <div class="poster">
+                    <img class="poster-foto" src="../public/assets/img/poster.png">
+                </div>
+                <div class="info-rect">
+                    <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
+                </div>
+                <div class="info-rect">
+                <h3>*****</h3>
+                </div>
+                <div class="info-rect">
+                 <h3>Release: 7-06-2018</h3>
+                </div>
+                <div class="info-rect ">
+                <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
+                </div>
+                <div class="info-rect">
+                <h3>KNOP</h3>
+                </div>
+            </div>
+        <?php endfor; ?>
+    </div>
             </div>
             <div id="repeater"></div>
             <div id="foot">
