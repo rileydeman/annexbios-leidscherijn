@@ -3,7 +3,7 @@
         <div id="info">
             <img src="<?= BASEURL ?>public/assets/img/AnnexBios-logo.png" alt="">
             <p>AnnexBios Leidsche Rijn is een moderne   <br> en sfeervolle bioscoop gelegen aan het <br> Berlijnplein in Utrecht. Met de nieuwste 
-                <br> technologie op het gebied van beeld en <br>  geluid biedt AnnexBios een ultieme filmervaring,</p>
+                <br> technologie op het gebied van beeld en <br>  geluid biedt AnnexBios een ultieme filmervaring.</p>
             <a href="" id="footerButtonA">
                 <div id="footerButton">
                     <p>LEES MEER</p>

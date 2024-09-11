@@ -83,6 +83,13 @@ main {
 
           #phone {
             margin-top: 2.5%;
+
+            #phone-num {
+              color: white;
+
+              font-family: lato;
+              text-decoration: underline;
+            }
           }
 
           #accessibility {

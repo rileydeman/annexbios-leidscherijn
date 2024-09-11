@@ -58,7 +58,7 @@ include_once("app/config/config.php");
                     </div>
                     <div id="phone" class="locInfoItem">
                         <img src="<?= BASEURL ?>public/assets/img/icons/phone-call.png" alt="">
-                        <p>020-12345678</p>
+                        <a id="phone-num" href="callto:0885152050">088 - 5152050</a>
                     </div>
                     <div id="accessibility">
                         <p id="title">BEREIKBAARHEID</p>
