@@ -19,7 +19,7 @@
 </div>
 
 <div id="bottom">
-    <form action="/" id="headerSelectFilmForm" method="get" target="_blank">
+    <form action="/bestellen" id="headerSelectFilmForm" method="get">
         <p id="formTitle">KOOP JE TICKETS</p>
 
         <div class="select" id="headerSelect">
