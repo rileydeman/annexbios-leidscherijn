@@ -2,6 +2,11 @@
 
 ## Week 2
 
+## 12/09/2024
+- Revised movie detail page (1 hour)
+- Header sticky (< 5 minutes)
+- Start at revising the order page (1 hours)
+
 ### 09/09/2024
 - Filter options + styling for the movies at the home (2 hours)
 - Merging some branches (0.25 hours)

@@ -36,13 +36,68 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
-    <!-- <p>Main order tickets</p> -->
-    <h1 class="tickets-bestellen">TICKETS BESTELLEN</h1>
-    <div class="filter">
-        <p class="film-naam">JURASSIC WORLD</p>
-        <p class="datum">DATUM ▽</p>
-        <p class="tijdstip">TIJDSTIP ▽</p>
+    <div id="content">
+        <div id="title">
+            <h1>TICKETS BESTELLEN</h1>
+        </div>
+
+        <div id="filters">
+            <div id="moviename">
+                <p>JURASSIC WORLD</p>
+            </div>
+            <div id="date">
+                <select name="" id="">
+                    <option value="">DATUM</option>
+
+                    <?php for ($i = 0; $i < 10; $i++) {
+                        $date = (Date("j") + ($i * 1)) . "-" . Date("m") . "-" . Date("Y");
+                        ?>
+                    <option value="<?= $date ?>"><?= $date ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div id="time">
+                <select name="" id="">
+                    <option value="">TIJD</option>
+
+                    <option value="10:50">10:50</option>
+                    <option value="15:35">15:35</option>
+                    <option value="22:10">22:10</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="innerContent">
+            <form action="" method="post">
+                <h2>STAP 1: KIES JE STOEL(EN)</h2>
+
+                <div id="outerRoom">
+                    <div id="innerRoom">
+                        <div id="movieCloth">
+                            <p>FILMDOEK</p>
+                        </div>
+
+                        <div id="chairs">
+                            <?php for ($i = 0; $i < 10; $i++) { ?>
+                            <div class="row">
+                                <?php for ($j = 0; $j < 12; $j++) { ?>
+                                <div class="chair"></div>
+                                <?php } ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div id="movie">
+                <p>movie</p>
+            </div>
+        </div>
     </div>
+
+    <!-- <p>Main order tickets</p> -->
+
     <div class="content">
         <div class="left">
             <div class="stap-1">
