@@ -327,6 +327,13 @@ main {
         }
         .info-rect {
           width: 100%;
+
+          .goto-film-knop {
+            background-color: #399CFF;
+            color: white;
+
+            font-size: small;
+          }
         }
         .info-rect:nth-child(2) {
           font-size: 1em;
