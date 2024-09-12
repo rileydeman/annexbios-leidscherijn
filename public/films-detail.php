@@ -69,13 +69,13 @@ include_once("../app/config/config.php");
 
                 <div id="kijkwijzers">
                     <div class="wijzer">
-                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/12.png" alt="">
+                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/12.png" title="12 Jaar" alt="">
                     </div>
                     <div class="wijzer">
-                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/angst.png" alt="">
+                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/angst.png" title="Angst" alt="">
                     </div>
                     <div class="wijzer">
-                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/geweld.png" alt="">
+                        <img src="<?= BASEURL ?>public/assets/img/icons/kijkwijzer/geweld.png" title="Geweld" alt="">
                     </div>
                 </div>
 
