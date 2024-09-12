@@ -137,7 +137,7 @@ include_once("app/config/config.php");
                 <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
                 </div>
                 <div class="info-rect">
-                <h3>KNOP</h3>
+                    <h3 class="goto-film-knop">MEER INFO & TICKETS</h3>
                 </div>
             </div>
         <?php endfor; ?>
