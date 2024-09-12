@@ -122,8 +122,10 @@ include_once("../app/config/config.php");
             </div>
         </div>
     </div>
-    <p class="koop-je-tickets">KOOP JE TICKETS</p>
-    <iframe class="trailer" src="https://www.youtube.com/embed/1FJD7jZqZEk" title="Jurassic World: Fallen Kingdom - Final Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a class="koop-je-tickets" href="<?= BASEURL ?>bestellen/filmnaam">KOOP JE TICKETS</a>
+    <div class="trailer-box">
+        <iframe class="trailer" src="https://www.youtube.com/embed/1FJD7jZqZEk" title="Jurassic World: Fallen Kingdom - Final Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </main>
 
 <footer>
