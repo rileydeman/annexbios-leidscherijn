@@ -94,6 +94,10 @@ main {
                         flex-direction: column;
                         align-items: center;
 
+                        h3 {
+                            color: var(--primary);
+                        }
+
                         #movieCloth {
                             width: 90%;
                             border-top: 5px solid var(--primary);
@@ -151,6 +155,7 @@ main {
 
                                     &:hover {
                                         background-color: var(--tertiary);
+                                        cursor: pointer;
 
                                         .innerChair {
                                             .seat {
@@ -175,6 +180,13 @@ main {
 
                                     &:hover {
                                         background-color: #000000;
+                                        cursor: default;
+
+                                        .innerChair {
+                                            .seat {
+                                                background-color: #000000;
+                                            }
+                                        }
                                     }
                                 }
 
@@ -198,6 +210,14 @@ main {
                                         }
                                     }
                                 }
+                            }
+
+                            #legenda {
+                                margin-top: 2.5%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
                             }
                         }
                     }

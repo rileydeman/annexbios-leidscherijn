@@ -79,10 +79,14 @@ include_once("../app/config/config.php");
                         </div>
 
                         <div id="chairs">
-                            <?php for ($i = 0; $i < 10; $i++) { ?>
+                            <?php
+                            $rows = 10;
+                            $cpr = 12;
+
+                            for ($i = 1; $i < ($rows + 1); $i++) { ?>
                             <div class="row">
-                                <?php for ($j = 0; $j < 12; $j++) { ?>
-                                <div class="chair">
+                                <?php for ($j = 1; $j < ($cpr + 1); $j++) { ?>
+                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="<?= $i ?>.<?= $j ?>">
                                     <div class="innerChair">
                                         <div class="seat"></div>
                                     </div>
@@ -90,7 +94,15 @@ include_once("../app/config/config.php");
                                 <?php } ?>
                             </div>
                             <?php } ?>
+
+                            <div id="legenda">
+                                <h3>LEGENDA</h3>
+                            </div>
                         </div>
+
+<!--                        <div id="legenda">-->
+<!--                            <h3>LEGENDA</h3>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </form>
