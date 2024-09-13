@@ -329,7 +329,7 @@ main {
           width: 100%;
 
           .goto-film-knop {
-            background-color: #399CFF;
+            background-color: #399cff;
             color: white;
 
             font-size: small;
@@ -361,6 +361,26 @@ main {
 
         .info-rect:nth-child(6) {
           padding: 5%;
+          #filmsButton2 {
+            width: fit-content;
+
+            #innerButton2 {
+              background-color: var(--primary);
+              width: fit-content;
+              padding: 2%;
+
+              p {
+                color: white;
+                font-size: 0.9em;
+              }
+            }
+
+            &:hover {
+              #innerButton2 {
+                background-color: #2137aa;
+              }
+            }
+          }
         }
 
         .info-rect-fill-1 {
