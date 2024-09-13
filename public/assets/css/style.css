@@ -4,6 +4,9 @@
     --footerBackground: #666666;
 
     --primary: #0080FF;
+    --secondary: #52a9ff;
+    --tertiary: #00458a;
+    --quaternary: #3b0075;
 }
 
 * {

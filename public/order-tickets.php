@@ -26,6 +26,7 @@ include_once("../app/config/config.php");
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/order-tickets.js?v=<?= time() ?>"></script>
 </head>
 
 <body>
@@ -81,7 +82,11 @@ include_once("../app/config/config.php");
                             <?php for ($i = 0; $i < 10; $i++) { ?>
                             <div class="row">
                                 <?php for ($j = 0; $j < 12; $j++) { ?>
-                                <div class="chair"></div>
+                                <div class="chair">
+                                    <div class="innerChair">
+                                        <div class="seat"></div>
+                                    </div>
+                                </div>
                                 <?php } ?>
                             </div>
                             <?php } ?>
