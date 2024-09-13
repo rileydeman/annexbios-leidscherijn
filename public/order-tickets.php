@@ -26,6 +26,7 @@ include_once("../app/config/config.php");
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/order-tickets.js?v=<?= time() ?>"></script>
 </head>
 
 <body>
@@ -36,13 +37,84 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
-    <!-- <p>Main order tickets</p> -->
-    <h1 class="tickets-bestellen">TICKETS BESTELLEN</h1>
-    <div class="filter">
-        <p class="film-naam">JURASSIC WORLD</p>
-        <p class="datum">DATUM ▽</p>
-        <p class="tijdstip">TIJDSTIP ▽</p>
+    <div id="content">
+        <div id="title">
+            <h1>TICKETS BESTELLEN</h1>
+        </div>
+
+        <div id="filters">
+            <div id="moviename">
+                <p>JURASSIC WORLD</p>
+            </div>
+            <div id="date">
+                <select name="" id="">
+                    <option value="">DATUM</option>
+
+                    <?php for ($i = 0; $i < 10; $i++) {
+                        $date = (Date("j") + ($i * 1)) . "-" . Date("m") . "-" . Date("Y");
+                        ?>
+                    <option value="<?= $date ?>"><?= $date ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div id="time">
+                <select name="" id="">
+                    <option value="">TIJD</option>
+
+                    <option value="10:50">10:50</option>
+                    <option value="15:35">15:35</option>
+                    <option value="22:10">22:10</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="innerContent">
+            <form action="" method="post">
+                <h2>STAP 1: KIES JE STOEL(EN)</h2>
+
+                <div id="outerRoom">
+                    <div id="innerRoom">
+                        <div id="movieCloth">
+                            <p>FILMDOEK</p>
+                        </div>
+
+                        <div id="chairs">
+                            <?php
+                            $rows = 10;
+                            $cpr = 12;
+
+                            for ($i = 1; $i < ($rows + 1); $i++) { ?>
+                            <div class="row">
+                                <?php for ($j = 1; $j < ($cpr + 1); $j++) { ?>
+                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="<?= $i ?>.<?= $j ?>">
+                                    <div class="innerChair">
+                                        <div class="seat"></div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                            <?php } ?>
+
+                            <div id="legenda">
+                                <h3>LEGENDA</h3>
+                            </div>
+                        </div>
+
+<!--                        <div id="legenda">-->
+<!--                            <h3>LEGENDA</h3>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </form>
+
+            <div id="movie">
+                <p>movie</p>
+            </div>
+        </div>
     </div>
+
+    <!-- <p>Main order tickets</p> -->
+
     <div class="content">
         <div class="left">
             <div class="stap-1">
