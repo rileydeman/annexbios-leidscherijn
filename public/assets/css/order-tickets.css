@@ -34,7 +34,8 @@ main {
                 padding: .75% 1.5%;
             }
 
-            #date, #time {
+            #date,
+            #time {
                 min-width: 9%;
 
                 select {
@@ -54,7 +55,7 @@ main {
                     option[value=""] {
                         display: none;
                     }
-                    
+
                     &:hover {
                         cursor: pointer;
                     }
@@ -79,10 +80,12 @@ main {
 
                 h2 {
                     color: var(--primary);
+                    margin-bottom: 1%;
                 }
 
                 #outerRoom {
                     margin-top: 2.5%;
+                    margin-bottom: 5%;
                     width: 100%;
                     display: flex;
                     justify-content: center;
@@ -214,10 +217,126 @@ main {
 
                             #legenda {
                                 margin-top: 2.5%;
+                                width: 100%;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: center;
+
+                                #legenda-repeater {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-top: 2.5%;
+
+                                    .lr-item {
+                                        width: 14%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        p {
+                                            margin-top: 5%;
+                                            color: #000000;
+                                            font-size: 1.25rem;
+                                            text-align: center;
+                                        }
+
+                                        .legenda-chair {
+                                            aspect-ratio: 1/1;
+                                            width: 30%;
+                                            background-color: var(--primary);
+                                            margin: 0 .25%;
+                                            border-radius: 7px;
+                                            position: relative;
+
+                                            .innerChair {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 50%;
+                                                transform: translate(-50%, 0);
+
+                                                background-color: #FFFFFF;
+                                                aspect-ratio: 1/1;
+                                                width: 70%;
+
+                                                display: flex;
+                                                align-items: flex-end;
+                                                justify-content: center;
+
+                                                .seat {
+                                                    background-color: var(--secondary);
+                                                    width: 100%;
+                                                    height: 50%;
+                                                    transition: .25s ease;
+                                                }
+                                            }
+                                        }
+
+                                        .occupied {
+                                            background-color: #000000;
+                                            opacity: .7;
+
+                                            .innerChair {
+                                                .seat {
+                                                    background-color: #000000;
+                                                    height: 100%;
+                                                    opacity: .8;
+                                                }
+                                            }
+                                        }
+
+                                        .selected {
+                                            background-color: var(--primary);
+
+                                            .innerChair {
+                                                .seat {
+                                                    background-color: var(--secondary);
+                                                    height: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #ticketType-repeater {
+                    width: 100%;
+                    margin-top: 2.5%;
+                    margin-bottom: 5%;
+                    border-top: 4px solid #666666;
+                    border-bottom: 4px solid #666666;
+
+                    .tt-item {
+                        width: 100%;
+                        border-bottom: 1px solid #666666;
+                        padding: .75% .5%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h3 {
+                            color: #000000;
+                        }
+
+                        .selections {
+                            width: 18%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            select {
+                                padding: .5% 1%;
+                                font-size: 1.1rem;
+                            }
+
+                            p {
+                                font-size: 1.1rem;
                             }
                         }
                     }
@@ -385,6 +504,7 @@ main {
                     height: auto;
                 }
             }
+
             .kleur-index {
                 color: white;
 
@@ -408,6 +528,7 @@ main {
                     justify-content: center;
                     align-items: center;
                 }
+
                 .bezet {
                     background-color: #225465;
 
@@ -420,6 +541,7 @@ main {
                     justify-content: center;
                     align-items: center;
                 }
+
                 .jouw-selectie {
                     background-color: #399CFF;
 
@@ -434,6 +556,7 @@ main {
                 }
             }
         }
+
         .stap-3 {
             margin-top: 4%;
 
@@ -445,6 +568,7 @@ main {
 
                 margin-bottom: 2%;
             }
+
             .bestelling-box {
                 color: #797979;
 
@@ -461,11 +585,12 @@ main {
                     width: 20%;
                     margin-right: 3%;
 
-                   .film-poster {
+                    .film-poster {
                         width: 100%;
                         height: auto;
-                    } 
+                    }
                 }
+
                 .bestelling-box-right {
                     width: 80%;
 
@@ -474,18 +599,21 @@ main {
                         font-size: large;
                         font-weight: bold;
                     }
+
                     .film-kijkwijzers {
                         .kijkwijzer {
                             max-width: 40px;
                             height: auto;
                         }
                     }
+
                     .bestelling-info {
                         font-size: small;
                     }
                 }
             }
         }
+
         .stap-4 {
             margin-top: 4%;
 
@@ -497,6 +625,7 @@ main {
 
                 margin-bottom: 2%;
             }
+
             .gegevens-invullen {
                 color: gray;
 
@@ -510,17 +639,20 @@ main {
 
                     border: 2px solid #399CFF;
                 }
+
                 .vn-input {
                     width: 49%;
                     margin-right: 1%;
 
                     font-size: small;
                 }
+
                 .an-input {
                     width: 49%;
 
                     font-size: small;
                 }
+
                 .email-input {
                     width: 100%;
 
@@ -528,6 +660,7 @@ main {
                 }
             }
         }
+
         .stap-5 {
             margin-top: 4%;
 
@@ -539,6 +672,7 @@ main {
 
                 margin-bottom: 2%;
             }
+
             .betaalwijzes {
                 width: 100%;
                 display: flex;
@@ -553,24 +687,28 @@ main {
                         border-radius: 0%;
                         background-color: #399CFF;
                     }
-                    
+
                     .betaalwijze-img {
                         width: 30%;
                     }
                 }
             }
+
             .avv {
                 color: #666666;
 
                 display: flex;
+
                 .avv-checkbox {
                     width: 30px;
                     height: 30px;
                     border: 1px solid #399CFF;
                     border-radius: 0%;
                 }
+
                 .avv-text {
                     margin-left: 2%;
+
                     .avv-link {
                         color: #666666;
 
@@ -578,7 +716,7 @@ main {
                         text-decoration: underline;
                     }
                 }
-                
+
             }
         }
 
@@ -595,6 +733,7 @@ main {
             width: 100%;
             height: auto;
         }
+
         .card-title {
             margin-top: 5%;
             margin-left: 5%;
@@ -606,41 +745,45 @@ main {
             font-size: large;
             font-weight: bold;
         }
+
         .card-beoordeling {
             margin-top: 5%;
             margin-left: 5%;
 
             display: flex;
         }
+
         .card-release {
             margin-top: 5%;
             margin-left: 5%;
         }
+
         .card-summary {
             margin-top: 5%;
             margin-left: 5%;
         }
     }
 
-    
+
 }
+
 .afrekenen {
-        background-color: #4596BA;
-        color: white;
+    background-color: #4596BA;
+    color: white;
 
-        width: 62%;
-        height: 100px;
+    width: 62%;
+    height: 100px;
 
-        margin-top: 2%;
-        margin-left: -7.5%;
-        margin-bottom: 5%;
+    margin-top: 2%;
+    margin-left: -7.5%;
+    margin-bottom: 5%;
 
-        padding: 2%;
+    padding: 2%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        font-size: xx-large;
-        font-weight: bold;
-    }
+    font-size: xx-large;
+    font-weight: bold;
+}

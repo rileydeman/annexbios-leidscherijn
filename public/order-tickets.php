@@ -86,7 +86,7 @@ include_once("../app/config/config.php");
                             for ($i = 1; $i < ($rows + 1); $i++) { ?>
                             <div class="row">
                                 <?php for ($j = 1; $j < ($cpr + 1); $j++) { ?>
-                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="<?= $i ?>.<?= $j ?>">
+                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="row<?= $i ?>chair<?= $j ?>">
                                     <div class="innerChair">
                                         <div class="seat"></div>
                                     </div>
@@ -97,13 +97,59 @@ include_once("../app/config/config.php");
 
                             <div id="legenda">
                                 <h3>LEGENDA</h3>
+
+                                <div id="legenda-repeater">
+                                    <div class="lr-item">
+                                        <div class="legenda-chair">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>VRIJ</p>
+                                    </div>
+
+                                    <div class="lr-item">
+                                        <div class="legenda-chair occupied">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>BEZET</p>
+                                    </div>
+
+                                    <div class="lr-item">
+                                        <div class="legenda-chair selected">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>JOUW SELECTIE</p>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-
-<!--                        <div id="legenda">-->
-<!--                            <h3>LEGENDA</h3>-->
-<!--                        </div>-->
                     </div>
+                </div>
+
+                <h2>STAP 2: KIES JE TICKET</h2>
+                <p id="totalTickets">Totaal kaarten: 0</p>
+                <div id="ticketType-repeater">
+<!--                    <div class="tt-item" id="">-->
+<!--                        <h3>Rij 1 Stoel 1</h3>-->
+<!--                        <div class="selections">-->
+<!--                            <select name="" id="">-->
+<!--                                <option value="9">Normaal - &euro;9,00</option>-->
+<!--                                <option value="5">Kind -  &euro;5,00</option>-->
+<!--                                <option value="7">65+ - &euro;7,00</option>-->
+<!--                            </select>-->
+<!---->
+<!--                            <p>&euro;9,00</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </form>
 
