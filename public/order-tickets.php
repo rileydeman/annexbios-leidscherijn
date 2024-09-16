@@ -151,6 +151,8 @@ include_once("../app/config/config.php");
 <!--                        </div>-->
 <!--                    </div>-->
                 </div>
+
+                <h2>STAP 3: CONTROLEER JE BESTELLING</h2>
             </form>
 
             <div id="movie">
@@ -163,21 +165,6 @@ include_once("../app/config/config.php");
 
     <div class="content">
         <div class="left">
-            <div class="stap-1">
-                <div><p class="stap-1-title">STAP 1: KIES JE TICKET</p></div>
-                <table>
-                    <tr class="row-1"><td class="space-right"><p>TYPE</p></td><td><p>PRIJS</p></td><td><p>AANTAL</p></td></tr>
-                    <tr><td class="space-right"><p>Normaal</p></td><td><p>€9,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                    <tr><td class="space-right"><p>Kind t/m 11 jaar</p></td><td><p>€5,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                    <tr><td class="space-right"><p>65 +</p></td><td><p>€7,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                </table>
-                <div class="voucher"><p class="voucher-text">VOUCHERCODE</p><input class="voucher-input" type="text"><P class="voucher-redeem">TOEVOEGEN</P></div>
-            </div>
-            <div class="stap-2">
-                <div><p class="stap-2-title">STAP 2: KIES JE STOEL</p></div>
-                <div class="indeling"><img class="indeling-img" src="../public/assets/img/indeling.png"></div>
-                <div class="kleur-index"><p class="vrij">VRIJ</p><p class="bezet">BEZET</p><p class="jouw-selectie">JOUW SECTIE</p></div>
-            </div>
             <div class="stap-3">
                 <div><p class="stap-3-title">STAP 3: CONTROLEER JE BESTELLING</p></div>
                 <div class="bestelling-box">
