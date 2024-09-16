@@ -154,19 +154,76 @@ include_once("../app/config/config.php");
                 <h2>STAP 3: CONTROLEER JE BESTELLING</h2>
 
 <!--                Ga hier door met de html (en php) voor de pagina-->
+            <div class="stap-3">
+                
+                <div class="bestelling-box">
+                    <div class="bestelling-box-left">
+                        <img class="film-poster" src="../public/assets/img/poster.png">
+                    </div>
+                    <div class="bestelling-box-right">
+                        <p class="film-title">JURASSIC WORLD: FALLEN KINGDOM</p>
+                        <div class="film-kijkwijzers">
+                            <img class="kijkwijzer" title="12 jaar" src="../public/assets/img/icons/kijkwijzer/12.png">
+                            <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
+                            <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
+                        </div>
+                        <div class="bestelling-info">
+                            <p><b>Bioscoop:</b></p>
+                            <p><b>Wanneer:</b></p>
+                            <p><b>Stoelen:</b></p>
+                            <p><b>Tickets:</b></p>
+                            <br>
+                            <p><b>Totaal # ticket:</b></p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="stap-4">
+                <div><p class="stap-4-title">STAP 4: VUL JE GEGEVENS IN</p></div>
+                <div class="gegevens-invullen">
+                    <input class="gegevens-input vn-input" type="text" placeholder="Voornaam">
+                    <input class="gegevens-input an-input" type="text" placeholder="Achternaam*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                </div>
+            </div>
+            <div class="stap-5">
+    <div><p class="stap-5-title">STAP 5: KIES JE BETAALWIJZE</p></div>
+    <div class="betaalwijzes">
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img nbb" src="../public/assets/img/nbb.png" alt="NBB">
+        </div>
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img maestro" src="../public/assets/img/maestro.png" alt="Maestro">
+        </div>
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img ideal" src="../public/assets/img/ideal.png" alt="iDEAL">
+        </div>
+    </div>
+    <div class="avv">
+        <input class="avv-checkbox" type="checkbox">
+        <p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p>
+    </div>
+</div>
+
             </form>
 
             <div id="movie">
                 <p>movie</p>
-            </div>
+            </div>    
         </div>
     </div>
 
     <!-- <p>Main order tickets</p> -->
 
-    <div class="content">
-        <div class="left">
-            <div class="stap-3">
+     <div class="content">
+        <div class="left"> 
+            <!-- <div class="stap-3">
                 <div><p class="stap-3-title">STAP 3: CONTROLEER JE BESTELLING</p></div>
                 <div class="bestelling-box">
                     <div class="bestelling-box-left">
@@ -211,7 +268,7 @@ include_once("../app/config/config.php");
                 <div class="avv"><input class="avv-checkbox" type="checkbox"><p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p></div>
             </div>
 
-        </div>
+        </div>-->  
         <div class="film-card">
             <div class="poster"><img class="card-poster" src="../public/assets/img/poster.png"></div>
             <p class="card-title">JURASSIC WORLD: FALLEN KINGDOM </p>
