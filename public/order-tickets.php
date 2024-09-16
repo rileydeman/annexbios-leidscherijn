@@ -146,13 +146,14 @@ include_once("../app/config/config.php");
 <!--                                <option value="5">Kind -  &euro;5,00</option>-->
 <!--                                <option value="7">65+ - &euro;7,00</option>-->
 <!--                            </select>-->
-<!---->
 <!--                            <p>&euro;9,00</p>-->
 <!--                        </div>-->
 <!--                    </div>-->
                 </div>
 
                 <h2>STAP 3: CONTROLEER JE BESTELLING</h2>
+
+<!--                Ga hier door met de html (en php) voor de pagina-->
             </form>
 
             <div id="movie">
