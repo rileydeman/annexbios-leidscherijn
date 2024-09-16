@@ -54,3 +54,5 @@
         <p>&copy; 2024-<?= Date("Y") ?> AnnexBios // Powered by <a href="https://www.rileydeman.com/" target="_blank" class="poweredByText">rileydeman</a>, Jesse & Tristan</p>
     </div>
 </div>
+
+<?php $conn -> close(); ?>
