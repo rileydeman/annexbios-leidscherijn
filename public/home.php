@@ -54,7 +54,15 @@ include_once("app/config/config.php");
                 <div id="locationInfo">
                     <div id="address" class="locInfoItem">
                         <img src="<?= BASEURL ?>public/assets/img/icons/location-marker.png" alt="">
-                        <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+                        <?php if (isMobileDevice()) {?>
+                            <a id="address-text" href="https://www.google.nl/maps/dir//Path%C3%A9+Utrecht+Leidsche+Rijn,+Berlijnplein+100,+3541+CM+Utrecht/@52.0966297,4.9977874,13z/data=!4m18!1m8!3m7!1s0x47c66f90fa96b45d:0x780d45f7e5b3ac34!2sPath%C3%A9+Utrecht+Leidsche+Rijn!8m2!3d52.0966297!4d5.0698852!15sCgZQYXRow6kiA4gBAVoIIgZwYXRow6mSAQ1tb3ZpZV90aGVhdGVy4AEA!16s%2Fg%2F11bvvy9nsj!4m8!1m0!1m5!1m1!1s0x47c66f90fa96b45d:0x780d45f7e5b3ac34!2m2!1d5.0698852!2d52.0966297!3e3?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D">Berlijnplein 101 <br> 3541 CM Utrecht</a>
+                        <?php
+                            } else { ?>
+                            <p>Berlijnplein 101 <br> 3541 CM Utrecht</p>
+                        <?php 
+                            }
+                        ?>
+                        
                     </div>
                     <div id="phone" class="locInfoItem">
                         <img src="<?= BASEURL ?>public/assets/img/icons/phone-call.png" alt="">
@@ -121,12 +129,12 @@ include_once("app/config/config.php");
     <div class="parent">
         <?php for ($i = 1; $i <= 12; $i++): ?>
             <div class="mobox<?= $i ?>">
-                <div class="poster">
+                <a class="poster" href="<?= BASEURL ?>film/filmnaam">
                     <img class="poster-foto" src="../public/assets/img/poster.png">
-                </div>
-                <div class="info-rect">
+                </a>
+                <a class="info-rect" href="<?= BASEURL ?>film/filmnaam">
                     <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
-                </div>
+                </a>
                 <div class="info-rect">
                 <h3>*****</h3>
                 </div>
@@ -136,6 +144,9 @@ include_once("app/config/config.php");
                 <div class="info-rect ">
                 <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
                 </div>
+                <a class="info-rect" href="<?= BASEURL ?>film/filmnaam">
+                    <h3 class="goto-film-knop">MEER INFO & TICKETS</h3>
+                </a>
                 <div class="info-rect">
                 <a id="filmsButton2" href="<?= BASEURL ?>film/<?= $i ?>">
                 <div id="innerButton2">
