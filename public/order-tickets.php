@@ -1,6 +1,9 @@
 <?php
 //Including config file
 include_once("../app/config/config.php");
+
+//including db conn
+include_once("../app/db/db-conn.php")
 ?>
 
 <!doctype html>
@@ -86,7 +89,7 @@ include_once("../app/config/config.php");
                             for ($i = 1; $i < ($rows + 1); $i++) { ?>
                             <div class="row">
                                 <?php for ($j = 1; $j < ($cpr + 1); $j++) { ?>
-                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="<?= $i ?>.<?= $j ?>">
+                                <div class="chair" row="<?= $i ?>" chair="<?= $j ?>" coordinate="row<?= $i ?>chair<?= $j ?>">
                                     <div class="innerChair">
                                         <div class="seat"></div>
                                     </div>
@@ -97,42 +100,133 @@ include_once("../app/config/config.php");
 
                             <div id="legenda">
                                 <h3>LEGENDA</h3>
+
+                                <div id="legenda-repeater">
+                                    <div class="lr-item">
+                                        <div class="legenda-chair">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>VRIJ</p>
+                                    </div>
+
+                                    <div class="lr-item">
+                                        <div class="legenda-chair occupied">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>BEZET</p>
+                                    </div>
+
+                                    <div class="lr-item">
+                                        <div class="legenda-chair selected">
+                                            <div class="innerChair">
+                                                <div class="seat"></div>
+                                            </div>
+                                        </div>
+
+                                        <p>JOUW SELECTIE</p>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-
-<!--                        <div id="legenda">-->
-<!--                            <h3>LEGENDA</h3>-->
-<!--                        </div>-->
                     </div>
                 </div>
+
+                <h2>STAP 2: KIES JE TICKET</h2>
+                <p id="totalTickets">Totaal kaarten: 0</p>
+                <div id="ticketType-repeater">
+<!--                    <div class="tt-item" id="">-->
+<!--                        <h3>Rij 1 Stoel 1</h3>-->
+<!--                        <div class="selections">-->
+<!--                            <select name="" id="">-->
+<!--                                <option value="9">Normaal - &euro;9,00</option>-->
+<!--                                <option value="5">Kind -  &euro;5,00</option>-->
+<!--                                <option value="7">65+ - &euro;7,00</option>-->
+<!--                            </select>-->
+<!--                            <p>&euro;9,00</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+
+                <h2>STAP 3: CONTROLEER JE BESTELLING</h2>
+
+<!--                Ga hier door met de html (en php) voor de pagina-->
+            <div class="stap-3">
+                
+                <div class="bestelling-box">
+                    <div class="bestelling-box-left">
+                        <img class="film-poster" src="../public/assets/img/poster.png">
+                    </div>
+                    <div class="bestelling-box-right">
+                        <p class="film-title">JURASSIC WORLD: FALLEN KINGDOM</p>
+                        <div class="film-kijkwijzers">
+                            <img class="kijkwijzer" title="12 jaar" src="../public/assets/img/icons/kijkwijzer/12.png">
+                            <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
+                            <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
+                        </div>
+                        <div class="bestelling-info">
+                            <p><b>Bioscoop:</b></p>
+                            <p><b>Wanneer:</b></p>
+                            <p><b>Stoelen:</b></p>
+                            <p><b>Tickets:</b></p>
+                            <br>
+                            <p><b>Totaal # ticket:</b></p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="stap-4">
+                <div><p class="stap-4-title">STAP 4: VUL JE GEGEVENS IN</p></div>
+                <div class="gegevens-invullen">
+                    <input class="gegevens-input vn-input" type="text" placeholder="Voornaam">
+                    <input class="gegevens-input an-input" type="text" placeholder="Achternaam*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                    <br>
+                    <input class="gegevens-input email-input" type="email" placeholder="E-mailadres*" required>
+                </div>
+            </div>
+            <div class="stap-5">
+    <div><p class="stap-5-title">STAP 5: KIES JE BETAALWIJZE</p></div>
+    <div class="betaalwijzes">
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img nbb" src="../public/assets/img/nbb.png" alt="NBB">
+        </div>
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img maestro" src="../public/assets/img/maestro.png" alt="Maestro">
+        </div>
+        <div class="betaalwijze">
+            <input class="betaalwijze-checkbox" type="checkbox">
+            <img class="betaalwijze-img ideal" src="../public/assets/img/ideal.png" alt="iDEAL">
+        </div>
+    </div>
+    <div class="avv">
+        <input class="avv-checkbox" type="checkbox">
+        <p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p>
+    </div>
+</div>
+
             </form>
 
             <div id="movie">
                 <p>movie</p>
-            </div>
+            </div>    
         </div>
     </div>
 
     <!-- <p>Main order tickets</p> -->
 
-    <div class="content">
-        <div class="left">
-            <div class="stap-1">
-                <div><p class="stap-1-title">STAP 1: KIES JE TICKET</p></div>
-                <table>
-                    <tr class="row-1"><td class="space-right"><p>TYPE</p></td><td><p>PRIJS</p></td><td><p>AANTAL</p></td></tr>
-                    <tr><td class="space-right"><p>Normaal</p></td><td><p>€9,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                    <tr><td class="space-right"><p>Kind t/m 11 jaar</p></td><td><p>€5,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                    <tr><td class="space-right"><p>65 +</p></td><td><p>€7,00</p></td><td><select><option>0</option><option>1</option></select></td></tr>
-                </table>
-                <div class="voucher"><p class="voucher-text">VOUCHERCODE</p><input class="voucher-input" type="text"><P class="voucher-redeem">TOEVOEGEN</P></div>
-            </div>
-            <div class="stap-2">
-                <div><p class="stap-2-title">STAP 2: KIES JE STOEL</p></div>
-                <div class="indeling"><img class="indeling-img" src="../public/assets/img/indeling.png"></div>
-                <div class="kleur-index"><p class="vrij">VRIJ</p><p class="bezet">BEZET</p><p class="jouw-selectie">JOUW SECTIE</p></div>
-            </div>
-            <div class="stap-3">
+     <div class="content">
+        <div class="left"> 
+            <!-- <div class="stap-3">
                 <div><p class="stap-3-title">STAP 3: CONTROLEER JE BESTELLING</p></div>
                 <div class="bestelling-box">
                     <div class="bestelling-box-left">
@@ -177,7 +271,7 @@ include_once("../app/config/config.php");
                 <div class="avv"><input class="avv-checkbox" type="checkbox"><p class="avv-text">Ja, ik ga akkoord met de <a class="avv-link" href="/avv">algemene voorwaarden</a>.</p></div>
             </div>
 
-        </div>
+        </div>-->  
         <div class="film-card">
             <div class="poster"><img class="card-poster" src="../public/assets/img/poster.png"></div>
             <p class="card-title">JURASSIC WORLD: FALLEN KINGDOM </p>

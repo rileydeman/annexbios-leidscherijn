@@ -78,8 +78,12 @@ main {
           }
 
           #address {
-            margin-bottom: 2.5%;
-          }
+             margin-bottom: 2.5%;
+            #address-text {
+              color: #ffffff;
+              text-decoration: none;
+            }
+            }
 
           #phone {
             margin-top: 2.5%;
