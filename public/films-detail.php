@@ -29,6 +29,9 @@ include_once("../app/db/db-conn.php")
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/fetch-movie.js">
+        let id = 83;
+    </script>
 
 </head>
 
@@ -40,10 +43,11 @@ include_once("../app/db/db-conn.php")
 </header>
 
 <main>
-
+    
     <div id="content">
+        <div id="result"></div>
         <div id="title">
-            <h1>JURASSIC WORLD: FALLEN KINGDOM</h1>
+            <h1 id="title-text">JURASSIC WORLD: FALLEN KINGDOM</h1>
         </div>
         
         <div id="info">
