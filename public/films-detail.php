@@ -26,6 +26,9 @@ include_once("../app/config/config.php");
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
+    <script defer src="<?= BASEURL ?>public/assets/js/fetch-movie.js">
+        let id = 83;
+    </script>
 
 </head>
 
@@ -37,8 +40,8 @@ include_once("../app/config/config.php");
 </header>
 
 <main>
-
-    <div id="content">
+    
+    <div id="content"><div class="result"></div>
         <div id="title">
             <h1>JURASSIC WORLD: FALLEN KINGDOM</h1>
         </div>
