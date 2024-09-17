@@ -14,6 +14,9 @@ define("BASEURL_CMS", "{$url}/admin/");
 define("DOCUMENT_ROOT", "{$_SERVER['DOCUMENT_ROOT']}");
 
 
+//Get secrets from config.ini file
+$secrets = parse_ini_file(DOCUMENT_ROOT . "/config.ini", true);
+
 //Function for is a mobile device check
 function isMobileDevice()
 {
