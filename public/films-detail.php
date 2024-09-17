@@ -41,9 +41,10 @@ include_once("../app/config/config.php");
 
 <main>
     
-    <div id="content"><div class="result"></div>
+    <div id="content">
+        <div id="result"></div>
         <div id="title">
-            <h1>JURASSIC WORLD: FALLEN KINGDOM</h1>
+            <h1 id="title-text">JURASSIC WORLD: FALLEN KINGDOM</h1>
         </div>
         
         <div id="info">
