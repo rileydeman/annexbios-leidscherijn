@@ -9,15 +9,15 @@ fetch(fetch_url, {
     },
     // body: JSON.stringify(data) // Correct the data reference
 })
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-    }
-    return response.json(); // Assuming the response is JSON
-})
-.then(data => {
-    console.log(data); // Handle the response data
-})
-.catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-});
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // Assuming the response is JSON
+    })
+    .then(data => {
+        console.log(data); // Handle the response data
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });

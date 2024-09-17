@@ -33,60 +33,60 @@ include_once("../app/db/db-conn.php")
 
 <body>
 
-<header>
-    <!--    Getting the header document-->
-    <?php include_once("core/header.php"); ?>
-</header>
+    <header>
+        <!--    Getting the header document-->
+        <?php include_once("core/header.php"); ?>
+    </header>
 
-<main>
- <div class="blackb">
-   <div class="cropb">
-     <div class="titleb">
-        <div class="catt">
-        <h2>FILM AGENDA</h2>
-        </div>
-     </div>
-     <div class="filterb">
-     </div>
-     <div class="moviesb">
-    <div class="parent">
-        <?php for ($i = 1; $i <= 18; $i++): ?>
-            <div class="mobox<?= $i ?>">
-                <div class="poster">
-                    <img class="poster-foto" src="../public/assets/img/poster.png">
+    <main>
+        <div class="blackb">
+            <div class="cropb">
+                <div class="titleb">
+                    <div class="catt">
+                        <h2>FILM AGENDA</h2>
+                    </div>
                 </div>
-                <div class="info-rect">
-                    <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
+                <div class="filterb">
                 </div>
-                <div class="info-rect">
-                <h3>*****</h3>
+                <div class="moviesb">
+                    <div class="parent">
+                        <?php for ($i = 1; $i <= 18; $i++): ?>
+                            <div class="mobox<?= $i ?>">
+                                <div class="poster">
+                                    <img class="poster-foto" src="../public/assets/img/poster.png">
+                                </div>
+                                <div class="info-rect">
+                                    <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
+                                </div>
+                                <div class="info-rect">
+                                    <h3>*****</h3>
+                                </div>
+                                <div class="info-rect">
+                                    <h3>Release: 7-06-2018</h3>
+                                </div>
+                                <div class="info-rect ">
+                                    <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
+                                </div>
+                                <div class="info-rect">
+                                    <a id="filmsButton" href="<?= BASEURL ?>film/<?= $i ?>">
+                                        <div id="innerButton">
+                                            <p>MEER INFO & TICKETS</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endfor; ?>
+                    </div>
                 </div>
-                <div class="info-rect">
-                 <h3>Release: 7-06-2018</h3>
-                </div>
-                <div class="info-rect ">
-                <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
-                </div>
-                <div class="info-rect">
-                <a id="filmsButton" href="<?= BASEURL ?>film/<?= $i ?>">
-                <div id="innerButton">
-                    <p>MEER INFO & TICKETS</p>
-                </div>
-            </a>
-                </div>
+
             </div>
-        <?php endfor; ?>
-    </div>
-</div>
+        </div>
+    </main>
 
-    </div>
-  </div>
-</main>
-
-<footer>
-    <!--    Getting the footer document-->
-    <?php include_once("core/footer.php"); ?>
-</footer>
+    <footer>
+        <!--    Getting the footer document-->
+        <?php include_once("core/footer.php"); ?>
+    </footer>
 
 </body>
 

@@ -12,27 +12,27 @@ fetch(fetch_url, {
     },
     // body: JSON.stringify(data) // Correct the data reference
 })
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-    }
-    return response.json(); // Assuming the response is JSON
-})
-.then(data => {
-    // console.log(data); // Handle the response data
-    // let result = data;
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // Assuming the response is JSON
+    })
+    .then(data => {
+        // console.log(data); // Handle the response data
+        // let result = data;
 
-    console.log(data['data'][0]['description']);
-    // console.log(data[0].title);
-    // document.write(data[0[api_id]])
-    document.getElementById("title-text").innerHTML = data['data'][0]['title'];
-    // document.getElementById("result").innerHTML = data['data'][0]['image'];
-    // document.getElementById("result").innerHTML = data['data'][0]['description'];
-    // document.getElementById("result").innerHTML = data['data'][0]['description'];
-})
-.catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-});
+        console.log(data['data'][0]['description']);
+        // console.log(data[0].title);
+        // document.write(data[0[api_id]])
+        document.getElementById("title-text").innerHTML = data['data'][0]['title'];
+        // document.getElementById("result").innerHTML = data['data'][0]['image'];
+        // document.getElementById("result").innerHTML = data['data'][0]['description'];
+        // document.getElementById("result").innerHTML = data['data'][0]['description'];
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
 
 
 // [
