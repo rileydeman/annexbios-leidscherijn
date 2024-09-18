@@ -63,24 +63,7 @@ h3 {
   width: 100%;
 }
 
-.mobox1,
-.mobox2,
-.mobox3,
-.mobox4,
-.mobox5,
-.mobox6,
-.mobox7,
-.mobox8,
-.mobox9,
-.mobox10,
-.mobox11,
-.mobox12,
-.mobox13,
-.mobox14,
-.mobox15,
-.mobox16,
-.mobox17,
-.mobox18 {
+.mobox {
   display: flex;
   flex-direction: column;
   height: fit-content;

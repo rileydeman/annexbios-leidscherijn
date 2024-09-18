@@ -72,12 +72,12 @@ function fetchMovieData($movieId) {
 
 <div class="moviesb">
     <div class="parent">
-        <?php for ($i = 83; $i <= 99; $i++): 
+        <?php for ($i = 83; $i <= 150; $i++):
             $movieData = fetchMovieData($i);
             if (!empty($movieData['data'][0])):
                 $movie = $movieData['data'][0];
         ?>
-            <div class="mobox<?= $i - 82 ?>">
+            <div class="mobox">
                 <div class="poster">
                     <img class="poster-foto" src="<?= $movie['image'] ?>">
                 </div>
