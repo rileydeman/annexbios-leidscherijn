@@ -120,36 +120,65 @@ include_once("app/db/db-conn.php")
                         </form>
 
                     </div>
-                    <div class="moviesb">
-                        <div class="parent">
-                            <?php for ($i = 1; $i <= 12; $i++): ?>
-                                <div class="mobox<?= $i ?>">
-                                    <div class="poster">
-                                        <img class="poster-foto" src="../public/assets/img/poster.png">
-                                    </div>
-                                    <div class="info-rect">
-                                        <h3>JURASSIC WORLD: FALLEN KINGDOM </h3>
-                                    </div>
-                                    <div class="info-rect">
-                                        <h3>*****</h3>
-                                    </div>
-                                    <div class="info-rect">
-                                        <h3>Release: 7-06-2018</h3>
-                                    </div>
-                                    <div class="info-rect ">
-                                        <h3>Welkom in Jurassic World: Fallen Kingdom! Favoriete personages keren terug in dit 3D actie-spektakel.</h3>
-                                    </div>
-                                    <div class="info-rect">
-                                        <a id="filmsButton2" href="<?= BASEURL ?>film/<?= $i ?>">
-                                            <div id="innerButton2">
-                                                <p>MEER INFO & TICKETS</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endfor; ?>
+                    <?php
+$token = $secrets["api"]["annexbios"];
+
+function fetchMovieData($movieId) {
+    global $token;
+    $fetch_url = "https://annexbios.nickvz.nl/api/v1/movieData/{$movieId}";
+    
+    $ch = curl_init($fetch_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Authorization: Bearer {$token}",
+        "Content-Type: application/json"
+    ]);
+    
+    $response = curl_exec($ch);
+    curl_close($ch);
+    
+    return json_decode($response, true);
+}
+?>
+
+<div class="moviesb">
+    <div class="parent">
+        <?php for ($i = 83; $i <= 94; $i++): 
+            $movieData = fetchMovieData($i);
+            if (!empty($movieData['data'][0])):
+                $movie = $movieData['data'][0];
+        ?>
+            <div class="mobox<?= $i - 82 ?>">
+                <div class="poster">
+                    <img class="poster-foto" src="<?= $movie['image'] ?>">
+                </div>
+                <div class="info-rect">
+                    <h3><?= $movie['title'] ?></h3>
+                </div>
+                <div class="info-rect">
+                    <h3><?= str_repeat('*', round($movie['rating'] / 2)) ?></h3>
+                </div>
+                <div class="info-rect">
+                    <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
+                </div>
+                <div class="info-rect">
+                    <h3><?= substr($movie['description'], 0, 100) . '...' ?></h3>
+                </div>
+                <div class="info-rect">
+                    <a id="filmsButton2" href="<?= BASEURL ?>film/<?= $movie['api_id'] ?>">
+                        <div id="innerButton2">
+                            <p>MEER INFO & TICKETS</p>
                         </div>
-                    </div>
+                    </a>
+                </div>
+            </div>
+        <?php 
+            endif;
+        endfor; 
+        ?>
+    </div>
+</div>
+
                     <div id="repeater"></div>
                     <div id="foot">
                         <a href="<?= BASEURL ?>films" id="viewMoreFilmsBtn">
