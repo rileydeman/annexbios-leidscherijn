@@ -321,7 +321,9 @@ main {
         .mobox12 {
           display: flex;
           flex-direction: column;
-          height: fit-content;
+          justify-content: space-between;
+          /* height: fit-content; */
+          /* max-height: 100%; */
           background-color: white;
         }
 
@@ -365,6 +367,7 @@ main {
 
         .info-rect:nth-child(6) {
           padding: 5%;
+          bottom: 10px;
           #filmsButton2 {
             width: fit-content;
 
