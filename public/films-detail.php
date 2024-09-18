@@ -137,7 +137,13 @@ $movie = $movieData['data'][0];
     </a>
 
     <div id="trailer">
-        <iframe class="trailer" src="<?= $movie['trailer_link'] ?>" title="<?= $movie['title'] ?> - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <?php
+        function generateYoutubeEmbedLink($link) {
+            $videoId = explode("?v=", $link)[1];
+            return "https://www.youtube.com/embed/" . $videoId;
+        }
+        ?>
+        <iframe class="trailer" src="<?= generateYoutubeEmbedLink($movie['trailer_link']) ?>" title="<?= $movie['title'] ?> - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
     </main>
