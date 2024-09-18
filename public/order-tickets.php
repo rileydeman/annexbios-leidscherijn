@@ -40,6 +40,36 @@ include_once("../app/db/db-conn.php")
     </header>
 
     <main>
+    <?php
+$token = $secrets["api"]["annexbios"];
+
+function fetchMovieData($movieId) {
+    global $token;
+    $fetch_url = "https://annexbios.nickvz.nl/api/v1/movieData/{$movieId}";
+    
+    $ch = curl_init($fetch_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Authorization: Bearer {$token}",
+        "Content-Type: application/json"
+    ]);
+    
+    $response = curl_exec($ch);
+    curl_close($ch);
+    
+    return json_decode($response, true);
+}
+
+// Get the movie ID from the URL query parameter
+$movieId = isset($_GET['film']) ? intval($_GET['film']) : 83;
+
+// Ensure the movie ID is within the valid range (83-99)
+$movieId = max(83, min(99, $movieId));
+
+$movieData = fetchMovieData($movieId);
+$movie = $movieData['data'][0];
+?>
+
         <div id="content">
             <div id="title">
                 <h1>TICKETS BESTELLEN</h1>
@@ -47,7 +77,7 @@ include_once("../app/db/db-conn.php")
 
             <div id="filters">
                 <div id="moviename">
-                    <p>JURASSIC WORLD</p>
+                <p><?= $movie['title'] ?></p>
                 </div>
                 <div id="date">
                     <select name="" id="">
@@ -159,27 +189,27 @@ include_once("../app/db/db-conn.php")
                     <!--                Ga hier door met de html (en php) voor de pagina-->
                     <div class="stap-3">
 
-                        <div class="bestelling-box">
-                            <div class="bestelling-box-left">
-                                <img class="film-poster" src="../public/assets/img/poster.png">
-                            </div>
-                            <div class="bestelling-box-right">
-                                <p class="film-title">JURASSIC WORLD: FALLEN KINGDOM</p>
-                                <div class="film-kijkwijzers">
-                                    <img class="kijkwijzer" title="12 jaar" src="../public/assets/img/icons/kijkwijzer/12.png">
-                                    <img class="kijkwijzer" title="Geweld" src="../public/assets/img/icons/kijkwijzer/geweld.png">
-                                    <img class="kijkwijzer" title="Angst" src="../public/assets/img/icons/kijkwijzer/angst.png">
-                                </div>
-                                <div class="bestelling-info">
-                                    <p><b>Bioscoop:</b></p>
-                                    <p><b>Wanneer:</b></p>
-                                    <p><b>Stoelen:</b></p>
-                                    <p><b>Tickets:</b></p>
-                                    <br>
-                                    <p><b>Totaal # ticket:</b></p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="bestelling-box">
+    <div class="bestelling-box-left">
+        <img class="film-poster" src="<?= $movie['image'] ?>">
+    </div>
+    <div class="bestelling-box-right">
+        <p class="film-title"><?= $movie['title'] ?></p>
+        <div class="film-kijkwijzers">
+            <?php foreach ($movie['viewing_guides'][0]['symbols'] as $symbol): ?>
+                <img class="kijkwijzer" title="<?= $symbol['name'] ?>" src="<?= $symbol['image'] ?>">
+            <?php endforeach; ?>
+        </div>
+        <div class="bestelling-info">
+            <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
+            <p><b>Wanneer:</b> [Nog geen data]</p>
+            <p><b>Stoelen:</b> [Nog geen data]</p>
+            <p><b>Tickets:</b> [Nog geen data]</p>
+            <br>
+            <p><b>Totaal # ticket:</b> [Nog geen data]</p>
+        </div>
+    </div>
+</div>
                     </div>
                     <div class="stap-4">
                         <div>
