@@ -96,9 +96,25 @@ $movie = $movieData['data'][0];
                 }
                 ?>
             </div>
-
+            <!-- "viewing_guides": [
+//             {
+//                 "age": "16+",
+//                 "symbols": [
+//                     {
+//                         "name": "Angst",
+//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/angst.png"
+//                     },
+//                     {
+//                         "name": "Geweld",
+//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/geweld.png"
+//                     },
+//                     {
+//                         "name": "16+",
+//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/16.png"
+//                     }
+//                 ] -->
             <div id="kijkwijzers">
-                <?php foreach ($movie['viewing_guides'][0]['symbols'] as $symbol): ?>
+                <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
                     <div class="wijzer">
                         <img src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
                     </div>
