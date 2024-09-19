@@ -3,7 +3,7 @@
 include_once("app/config/config.php");
 
 //including db conn
-include_once("app/db/db-conn.php")
+include_once("app/db/db-conn.php");
 ?>
 
 <!doctype html>

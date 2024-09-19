@@ -7,4 +7,6 @@ RewriteRule ^films public/films-overview.php
 RewriteRule ^film/(.*)$ public/films-detail.php?film=$1
 RewriteRule ^bestellen public/order-tickets.php
 
+RewriteRule ^config.ini index.php
+
 ErrorDocument 404 /public/core/errors/404.php
