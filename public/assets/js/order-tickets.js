@@ -55,5 +55,7 @@ function updateTickets() {
 
 function updateAmountTickets() {
     totalTickets = document.getElementById("totalTickets");
+    totalTickets2 = document.getElementById("totalTickets2");
     totalTickets.innerHTML = `Totaal kaarten: ${document.getElementsByClassName("tt-item").length}`;
+    totalTickets2.innerHTML = `${document.getElementsByClassName("tt-item").length}`;
 }
