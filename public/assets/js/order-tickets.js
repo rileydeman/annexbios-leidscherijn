@@ -1,5 +1,6 @@
 let chairs = document.getElementsByClassName("chair");
 let ticketTypeRepeater = document.getElementById("ticketType-repeater");
+let ticketTypeRepeater2 = document.getElementById("ticketType-repeater2");
 
 for (let i = 0; i < chairs.length; i++) {
     chairs[i].addEventListener("click", function () {
@@ -29,6 +30,9 @@ for (let i = 0; i < chairs.length; i++) {
                     '                            <p>&euro;9,00</p>\n' +
                     '                        </div>\n' +
                     '                    </div>';
+                ticketTypeRepeater2.innerHTML += '<div class="tt-item2" >\n' +
+                    '                        <p>Rij ' + chairs[i].attributes.row.value + ' Stoel ' + chairs[i].attributes.chair.value + '</p>\n' +
+                    '                            </div>';
 
                 updateTickets();
                 updateAmountTickets();

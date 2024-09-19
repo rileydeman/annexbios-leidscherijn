@@ -203,7 +203,7 @@ $movie = $movieData['data'][0];
         <div class="bestelling-info">
             <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
             <p><b>Wanneer:</b> [Nog geen data]</p>
-            <p><b>Stoelen:</b> [Nog geen data]</p>
+            <p><b>Stoelen:</b><p id="ticketType-repeater2"></p></p>
             <p><b>Tickets:</b><p id="totalTickets2">0</p></p>
             <br>
             <p><b>Totaal # ticket:</b> [Nog geen data]</p>
