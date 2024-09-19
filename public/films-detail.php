@@ -76,7 +76,6 @@ $movie = $movieData['data'][0];
 ?>
 
 <div id="content">
-    <div id="result"></div>
     <div id="title">
         <h1 id="title-text"><?= $movie['title'] ?></h1>
     </div>
@@ -96,23 +95,6 @@ $movie = $movieData['data'][0];
                 }
                 ?>
             </div>
-            <!-- "viewing_guides": [
-//             {
-//                 "age": "16+",
-//                 "symbols": [
-//                     {
-//                         "name": "Angst",
-//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/angst.png"
-//                     },
-//                     {
-//                         "name": "Geweld",
-//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/geweld.png"
-//                     },
-//                     {
-//                         "name": "16+",
-//                         "image": "https://annexbios.nickvz.nl/assets/img/viewing_guides/16.png"
-//                     }
-//                 ] -->
             <div id="kijkwijzers">
                 <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
                     <div class="wijzer">
