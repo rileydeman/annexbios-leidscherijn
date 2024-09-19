@@ -30,7 +30,7 @@ include_once("../app/db/db-conn.php")
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/fetch-movie.js">
-        let id = 83;
+        // let id = 83;
     </script>
 
 </head>
@@ -76,7 +76,6 @@ $movie = $movieData['data'][0];
 ?>
 
 <div id="content">
-    <div id="result"></div>
     <div id="title">
         <h1 id="title-text"><?= $movie['title'] ?></h1>
     </div>
@@ -96,9 +95,8 @@ $movie = $movieData['data'][0];
                 }
                 ?>
             </div>
-
             <div id="kijkwijzers">
-                <?php foreach ($movie['viewing_guides'][0]['symbols'] as $symbol): ?>
+                <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
                     <div class="wijzer">
                         <img src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
                     </div>
@@ -114,7 +112,12 @@ $movie = $movieData['data'][0];
             </div>
 
             <div id="extraInfo">
-                <p><b>Genre:</b> <?= implode(', ', $movie['genres']) ?></p>
+                <p><b>Genre:</b>
+                    <?php foreach ($movie['genres'] as $genre){
+                    // var_dump($genre);
+                    echo $genre['name'].'&nbsp;';
+                    }?>
+                </p>
                 <p><b>Filmlengte:</b> <?= $movie['length'] ?> minuten</p>
                 <p><b>Land:</b> USA</p>
                 <p><b>Imdb score:</b> <?= $movie['rating'] ?>/10</p>

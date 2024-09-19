@@ -1,5 +1,6 @@
 let chairs = document.getElementsByClassName("chair");
 let ticketTypeRepeater = document.getElementById("ticketType-repeater");
+let ticketTypeRepeater2 = document.getElementById("ticketType-repeater2");
 
 for (let i = 0; i < chairs.length; i++) {
     chairs[i].addEventListener("click", function () {
@@ -29,6 +30,18 @@ for (let i = 0; i < chairs.length; i++) {
                     '                            <p>&euro;9,00</p>\n' +
                     '                        </div>\n' +
                     '                    </div>';
+                ticketTypeRepeater2.innerHTML += '<div class="tt-item2" >\n' +
+                    '                        <p>Rij ' + chairs[i].attributes.row.value + ' Stoel ' + chairs[i].attributes.chair.value + '</p>\n' +
+                    //                     '                        <div class="selections">\n' +
+                    // '                            <select name="ticketType-' + chairs[i].attributes.coordinate.value + '" id="">\n' +
+                    // '                                <option value="9,00">Normaal - &euro;9,00</option>\n' +
+                    // '                                <option value="5,00">Kind -  &euro;5,00</option>\n' +
+                    // '                                <option value="7,00">65+ - &euro;7,00</option>\n' +
+                    // '                            </select>\n' +
+                    // '\n' +
+                    // '                            <p>&euro;9,00</p>\n' +
+                    // '                        </div>\n' +
+                    '                            </div>';
 
                 updateTickets();
                 updateAmountTickets();
@@ -55,5 +68,7 @@ function updateTickets() {
 
 function updateAmountTickets() {
     totalTickets = document.getElementById("totalTickets");
+    totalTickets2 = document.getElementById("totalTickets2");
     totalTickets.innerHTML = `Totaal kaarten: ${document.getElementsByClassName("tt-item").length}`;
+    totalTickets2.innerHTML = `${document.getElementsByClassName("tt-item").length}`;
 }
