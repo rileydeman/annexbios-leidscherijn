@@ -19,10 +19,10 @@
                 <a href="/" class="footerNavItem">
                     <p>Veelgestelde vragen</p>
                 </a>
-                <a href="/" class="footerNavItem">
+                <a href="https://annexbios.nickvz.nl/#locations" class="footerNavItem">
                     <p>Vestigingen</p>
                 </a>
-                <a href="/" class="footerNavItem">
+                <a href="<?=BASEURL?>#location" class="footerNavItem">
                     <p>Contact</p>
                 </a>
             </div>
