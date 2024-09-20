@@ -3,7 +3,7 @@
 include_once("../app/config/config.php");
 
 //including db conn
-include_once("../app/db/db-conn.php")
+include_once("../app/db/db-conn.php");
 ?>
 
 <!doctype html>
@@ -39,6 +39,10 @@ include_once("../app/db/db-conn.php")
         <?php include_once("core/header.php"); ?>
     </header>
 
+    <?php $movie = fetchMovieData($_GET["film"]);
+    $movie = $movie["data"][0];
+    ?>
+
     <main>
         <div id="content">
             <div id="title">
@@ -47,7 +51,7 @@ include_once("../app/db/db-conn.php")
 
             <div id="filters">
                 <div id="moviename">
-                    <p><?= $movie['title'] ?></p>
+                    <p><?= $movie["title"] ?></p>
                 </div>
                 <div id="date">
                     <select name="" id="">
@@ -225,7 +229,24 @@ include_once("../app/db/db-conn.php")
                 </form>
 
                 <div id="movie">
-                    <p>movie</p>
+                    <div class="poster">
+                        <img class="poster-foto" src="<?= $movie['image'] ?>">
+                    </div>
+                    <div class="info-rect">
+                        <h3><?= $movie['title'] ?></h3>
+                    </div>
+                    <div class="info-rect">
+                        <p>
+                            <!-- <?= str_repeat('*', round($movie['rating'] / 2)) ?> -->
+                            IMDB Rating: <?= $movie['rating'] ?>
+                        </p>
+                    </div>
+                    <div class="info-rect">
+                        <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
+                    </div>
+                    <div class="info-rect">
+                        <h3><?= substr($movie['description'], 0, 100) . '...' ?></h3>
+                    </div>
                 </div>
             </div>
         </div>
