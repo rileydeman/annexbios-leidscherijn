@@ -85,7 +85,10 @@ function fetchMovieData($movieId) {
                     <h3><?= $movie['title'] ?></h3>
                 </div>
                 <div class="info-rect">
-                    <h3><?= str_repeat('*', round($movie['rating'])) ?></h3>
+                    <p>
+                        <!-- <?= str_repeat('*', round($movie['rating'] / 2)) ?> -->
+                        IMDB Rating: <?= $movie['rating']?>
+                    </p>
                 </div>
                 <div class="info-rect">
                     <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
