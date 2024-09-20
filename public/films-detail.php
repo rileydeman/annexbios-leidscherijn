@@ -44,37 +44,6 @@ include_once("../app/db/db-conn.php")
 
     <main>
 
-    <?php
-$token = $secrets["api"]["annexbios"];
-
-function fetchMovieData($movieId) {
-    global $token;
-    $fetch_url = "https://annexbios.nickvz.nl/api/v1/movieData/{$movieId}";
-    
-    $ch = curl_init($fetch_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Authorization: Bearer {$token}",
-        "Content-Type: application/json"
-    ]);
-    
-    $response = curl_exec($ch);
-    curl_close($ch);
-    
-    return json_decode($response, true);
-}
-
-$urlParts = explode('/', $_SERVER['REQUEST_URI']);
-$movieId = end($urlParts);
-
-// Ensure the movie ID is a number and within the valid range (83-99)
-$movieId = is_numeric($movieId) ? intval($movieId) : 83;
-$movieId = max(83, min(99, $movieId));
-
-$movieData = fetchMovieData($movieId);
-$movie = $movieData['data'][0];
-?>
-
 <div id="content">
     <div id="title">
         <h1 id="title-text"><?= $movie['title'] ?></h1>

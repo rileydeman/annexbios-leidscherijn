@@ -40,36 +40,6 @@ include_once("../app/db/db-conn.php")
     </header>
 
     <main>
-    <?php
-$token = $secrets["api"]["annexbios"];
-
-function fetchMovieData($movieId) {
-    global $token;
-    $fetch_url = "https://annexbios.nickvz.nl/api/v1/movieData/{$movieId}";
-    
-    $ch = curl_init($fetch_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Authorization: Bearer {$token}",
-        "Content-Type: application/json"
-    ]);
-    
-    $response = curl_exec($ch);
-    curl_close($ch);
-    
-    return json_decode($response, true);
-}
-
-// Get the movie ID from the URL query parameter
-$movieId = isset($_GET['film']) ? intval($_GET['film']) : 83;
-
-// Ensure the movie ID is within the valid range (83-99)
-$movieId = max(83, min(99, $movieId));
-
-$movieData = fetchMovieData($movieId);
-$movie = $movieData['data'][0];
-?>
-
         <div id="content">
             <div id="title">
                 <h1>TICKETS BESTELLEN</h1>
