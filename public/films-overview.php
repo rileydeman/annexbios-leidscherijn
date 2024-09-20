@@ -49,46 +49,46 @@ include_once("../app/db/db-conn.php")
                 <div class="filterb">
                 </div>
 
-<div class="moviesb">
-    <div class="parent">
-        <?php for ($i = 83; $i <= 150; $i++):
-            $movieData = fetchMovieData($i);
-            if (!empty($movieData['data'][0])):
-                $movie = $movieData['data'][0];
-        ?>
-            <div class="mobox">
-                <div class="poster">
-                    <img class="poster-foto" src="<?= $movie['image'] ?>">
+                <div class="moviesb">
+                    <div class="parent">
+                        <?php for ($i = 83; $i <= 150; $i++):
+                            $movieData = fetchMovieData($i);
+                            if (!empty($movieData['data'][0])):
+                                $movie = $movieData['data'][0];
+                        ?>
+                                <div class="mobox">
+                                    <div class="poster">
+                                        <img class="poster-foto" src="<?= $movie['image'] ?>">
+                                    </div>
+                                    <div class="info-rect">
+                                        <h3><?= $movie['title'] ?></h3>
+                                    </div>
+                                    <div class="info-rect">
+                                        <p>
+                                            <!-- <?= str_repeat('*', round($movie['rating'] / 2)) ?> -->
+                                            IMDB Rating: <?= $movie['rating'] ?>
+                                        </p>
+                                    </div>
+                                    <div class="info-rect">
+                                        <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
+                                    </div>
+                                    <div class="info-rect">
+                                        <h3><?= substr($movie['description'], 0, 100) . '...' ?></h3>
+                                    </div>
+                                    <div class="info-rect">
+                                        <a id="filmsButton" href="<?= BASEURL ?>film/<?= $movie['api_id'] ?>">
+                                            <div id="innerButton">
+                                                <p>MEER INFO & TICKETS</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                        <?php
+                            endif;
+                        endfor;
+                        ?>
+                    </div>
                 </div>
-                <div class="info-rect">
-                    <h3><?= $movie['title'] ?></h3>
-                </div>
-                <div class="info-rect">
-                    <p>
-                        <!-- <?= str_repeat('*', round($movie['rating'] / 2)) ?> -->
-                        IMDB Rating: <?= $movie['rating']?>
-                    </p>
-                </div>
-                <div class="info-rect">
-                    <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
-                </div>
-                <div class="info-rect">
-                    <h3><?= substr($movie['description'], 0, 100) . '...' ?></h3>
-                </div>
-                <div class="info-rect">
-                    <a id="filmsButton" href="<?= BASEURL ?>film/<?= $movie['api_id'] ?>">
-                        <div id="innerButton">
-                            <p>MEER INFO & TICKETS</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        <?php 
-            endif;
-        endfor; 
-        ?>
-    </div>
-</div>
 
             </div>
         </div>

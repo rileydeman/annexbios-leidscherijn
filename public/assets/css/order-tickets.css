@@ -341,65 +341,66 @@ main {
                         }
                     }
                 }
-                
+
 
                 /*Ga hier door met de CSS voor de pagina*/
                 .stap-3 {
                     margin-top: 4%;
-        
+
                     .stap-3-title {
                         color: #399CFF;
-        
+
                         font-size: larger;
                         font-weight: bold;
-        
+
                         margin-bottom: 2%;
                     }
-        
+
                     .bestelling-box {
                         color: #797979;
-        
+
                         width: 100%;
                         height: fit-content;
-        
+
                         padding: 1%;
-        
+
                         display: flex;
-        
+
                         border: 2px solid #4596BA;
-        
+
                         .bestelling-box-left {
                             width: 20%;
                             margin-right: 3%;
-        
+
                             .film-poster {
                                 width: 100%;
                                 height: auto;
                             }
                         }
-        
+
                         .bestelling-box-right {
                             width: 80%;
-        
+
                             .film-title {
                                 margin-top: 3%;
                                 margin-bottom: 1%;
                                 font-size: large;
                                 font-weight: bold;
                             }
-        
+
                             .film-kijkwijzers {
                                 .kijkwijzer {
                                     max-width: 40px;
                                     height: auto;
                                 }
                             }
-        
+
                             .bestelling-info {
                                 font-size: small;
 
                                 #ticketType-repeater2 {
                                     .tt-item2 {
+
                                         /* background-color: green; */
                                         h3 {
                                             color: #000000;
@@ -410,102 +411,102 @@ main {
                         }
                     }
                 }
-        
+
                 .stap-4 {
                     margin-top: 4%;
-        
+
                     .stap-4-title {
                         color: #399CFF;
-        
+
                         font-size: larger;
                         font-weight: bold;
-        
+
                         margin-bottom: 2%;
                     }
-        
+
                     .gegevens-invullen {
                         color: gray;
-        
+
                         width: 60%;
                         height: fit-content;
-        
+
                         /* display: flex; */
                         .gegevens-input {
                             margin-bottom: 1%;
                             padding: 2%;
-        
+
                             border: 2px solid #399CFF;
                         }
-        
+
                         .vn-input {
                             width: 49%;
                             margin-right: 1%;
-        
+
                             font-size: small;
                         }
-        
+
                         .an-input {
                             width: 49%;
-        
+
                             font-size: small;
                         }
-        
+
                         .email-input {
                             width: 100%;
-        
+
                             font-size: small;
                         }
                     }
                 }
-        
+
                 .stap-5 {
                     margin-top: 4%;
-        
+
                     .stap-5-title {
                         color: #6E4F7D;
-        
+
                         font-size: larger;
                         font-weight: bold;
-        
+
                         margin-bottom: 2%;
                     }
-        
+
                     .betaalwijzes {
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
                         gap: 7%;
                     }
-                    
+
                     .betaalwijze {
                         display: flex;
                         align-items: center;
                     }
-                    
+
                     .betaalwijze-checkbox {
                         margin-right: 20px;
                         transform: scale(1.5);
                     }
-                    
+
                     .betaalwijze-img {
                         height: 40px;
                     }
-                    
+
                     .avv {
                         display: flex;
                         align-items: center;
                         margin-top: 15px;
                     }
-                    
+
                     .avv-checkbox {
                         margin-right: 8px;
                         transform: scale(1.2);
                     }
-                    
+
                     .avv-text {
                         font-size: 1.1em;
                     }
-                    
+                }
             }
 
             #movie {
@@ -514,441 +515,53 @@ main {
                 position: sticky;
                 top: 17.5%;
                 height: fit-content;
-            }
-        }
-    }
-}
 
-
-/*Old code*/
-.tickets-bestellen {
-    background-color: white;
-    color: #399CFF;
-
-    width: 80%;
-    height: 50px;
-
-    margin-left: 10%;
-
-    padding-left: 2%;
-
-    display: flex;
-    align-items: center;
-}
-
-.filter {
-    color: #399CFF;
-
-    width: 80%;
-
-    margin-top: 1%;
-    margin-left: 10%;
-
-    gap: 1%;
-
-    display: flex;
-
-    .film-naam {
-        background-color: white;
-
-        width: fit-content;
-        height: fit-content;
-
-        padding: 1%;
-    }
-
-    .datum {
-        background-color: white;
-
-        width: fit-content;
-        height: fit-content;
-
-        padding: 1%;
-    }
-
-    .tijdstip {
-        background-color: white;
-
-        width: fit-content;
-        height: fit-content;
-
-        padding: 1%;
-    }
-}
-
-.content {
-    width: 80%;
-
-    margin-top: 2%;
-    margin-left: 10%;
-
-
-    gap: 2%;
-
-    display: flex;
-
-    .left {
-        background-color: white;
-
-        width: 80%;
-        height: fit-content;
-
-        padding: 2%;
-
-        .stap-1 {
-            color: #797979;
-
-            .stap-1-title {
-                color: #399CFF;
-
-                font-size: larger;
-                font-weight: bold;
-
-                margin-bottom: 2%;
-            }
-
-            .row-1 {
-                /* width: 100%; */
-
-                /* padding-bottom: 10%; */
-
-                /* border-bottom: 1px solid #797979; */
-            }
-
-            .voucher {
-                display: flex;
-                width: 100%;
-
-                margin-top: 2%;
-
-                gap: 2%;
-
-                .voucher-text {
-                    width: 20%;
-                }
-
-                .voucher-input {
-                    width: 60%;
-                }
-
-                .voucher-redeem {
-                    background-color: #399CFF;
-                    color: white;
-
-                    width: 20%;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    font-size: smaller;
-                }
-            }
-        }
-
-        .stap-2 {
-            margin-top: 4%;
-
-            .stap-2-title {
-                color: #399CFF;
-
-                font-size: larger;
-                font-weight: bold;
-
-                margin-bottom: 2%;
-            }
-
-            .indeling {
-                max-width: 80%;
-                height: auto;
-
-                margin-left: 10%;
-
-                .indeling-img {
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
-
-            .kleur-index {
-                color: white;
-
-                width: 100%;
-
-                padding-left: 25%;
-
-                gap: 4%;
-
-                display: flex;
-
-                .vrij {
-                    background-color: #399CFF;
-
-                    width: 100px;
-                    height: 40px;
-
-                    font-weight: bold;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .bezet {
-                    background-color: #225465;
-
-                    width: 100px;
-                    height: 40px;
-
-                    font-weight: bold;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .jouw-selectie {
-                    background-color: #399CFF;
-
-                    width: 120px;
-                    height: 40px;
-
-                    font-weight: bold;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
-
-        .stap-3 {
-            margin-top: 4%;
-
-            .stap-3-title {
-                color: #399CFF;
-
-                font-size: larger;
-                font-weight: bold;
-
-                margin-bottom: 2%;
-            }
-
-            .bestelling-box {
-                color: #797979;
-
-                width: 100%;
-                height: fit-content;
-
-                padding: 1%;
-
-                display: flex;
-
-                border: 2px solid #4596BA;
-
-                .bestelling-box-left {
-                    width: 20%;
-                    margin-right: 3%;
-
-                    .film-poster {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-
-                .bestelling-box-right {
-                    width: 80%;
-
-                    .film-title {
-                        margin-top: 3%;
-                        font-size: large;
-                        font-weight: bold;
-                    }
-
-                    .film-kijkwijzers {
-                        .kijkwijzer {
-                            max-width: 40px;
-                            height: auto;
-                        }
-                    }
-
-                    .bestelling-info {
-                        font-size: small;
-                    }
-                }
-            }
-        }
-
-        .stap-4 {
-            margin-top: 4%;
-
-            .stap-4-title {
-                color: #399CFF;
-
-                font-size: larger;
-                font-weight: bold;
-
-                margin-bottom: 2%;
-            }
-
-            .gegevens-invullen {
-                color: gray;
-
-                width: 60%;
-                height: fit-content;
-
-                /* display: flex; */
-                .gegevens-input {
-                    margin-bottom: 1%;
-                    padding: 2%;
-
-                    border: 2px solid #399CFF;
-                }
-
-                .vn-input {
-                    width: 49%;
-                    margin-right: 1%;
-
-                    font-size: small;
-                }
-
-                .an-input {
-                    width: 49%;
-
-                    font-size: small;
-                }
-
-                .email-input {
+                .poster {
                     width: 100%;
-
-                    font-size: small;
                 }
-            }
-        }
-
-        .stap-5 {
-            margin-top: 4%;
-
-            .stap-5-title {
-                color: #6E4F7D;
-
-                font-size: larger;
-                font-weight: bold;
-
-                margin-bottom: 2%;
-            }
-
-            .betaalwijzes {
-                width: 100%;
-                display: flex;
-
-                .betaalwijze {
-                    width: 30%;
-
-                    .betaalwijze-checkbox {
-                        width: 20px;
-                        height: 20px;
-                        border: 1px solid #399CFF;
-                        border-radius: 0%;
-                        background-color: #399CFF;
-                    }
-
-                    .betaalwijze-img {
-                        width: 30%;
-                    }
+                .info-rect {
+                    width: 100%;
                 }
-            }
-
-            .avv {
-                color: #666666;
-
-                display: flex;
-
-                .avv-checkbox {
-                    width: 30px;
-                    height: 30px;
-                    border: 1px solid #399CFF;
-                    border-radius: 0%;
+                .info-rect:nth-child(2) {
+                    font-size: 1em;
+                    padding: 7%;
                 }
 
-                .avv-text {
-                    margin-left: 2%;
+                .info-rect:nth-child(3) {
+                    font-size: 1em;
+                    font-weight: bold;
+                    /* letter-spacing: 8px; */
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    color: #666666;
+                }
 
-                    .avv-link {
-                        color: #666666;
+                .info-rect:nth-child(4) {
+                    font-size: 1em;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
 
-                        font-size: smaller;
-                        text-decoration: underline;
-                    }
+                .info-rect:nth-child(5) {
+                    font-size: 0.6em;
+                    padding: 5%;
+                    bottom: 10px;
+                }
+
+                .info-rect:nth-child(6) {
+                    padding: 5%;
+                }
+
+                .info-rect-fill-1 {
+                    font-size: 1em;
+                    padding: 5%;
+                }
+
+                .poster-foto {
+                    width: 100%;
                 }
 
             }
-        }
-
-    }
-
-    .film-card {
-        background-color: white;
-        color: #666666;
-
-        width: 20%;
-        height: fit-content;
-
-        .card-poster {
-            width: 100%;
-            height: auto;
-        }
-
-        .card-title {
-            margin-top: 5%;
-            margin-left: 5%;
-
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-
-            font-size: large;
-            font-weight: bold;
-        }
-
-        .card-beoordeling {
-            margin-top: 5%;
-            margin-left: 5%;
-
-            display: flex;
-        }
-
-        .card-release {
-            margin-top: 5%;
-            margin-left: 5%;
-        }
-
-        .card-summary {
-            margin-top: 5%;
-            margin-left: 5%;
         }
     }
-
-
-}
-
-.afrekenen {
-    background-color: #4596BA;
-    color: white;
-
-    width: 62%;
-    height: 100px;
-
-    margin-top: 2%;
-    margin-left: -7.5%;
-    margin-bottom: 5%;
-
-    padding: 2%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: xx-large;
-    font-weight: bold;
 }

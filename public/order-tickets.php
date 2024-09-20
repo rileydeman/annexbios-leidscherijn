@@ -3,7 +3,7 @@
 include_once("../app/config/config.php");
 
 //including db conn
-include_once("../app/db/db-conn.php")
+include_once("../app/db/db-conn.php");
 ?>
 
 <!doctype html>
@@ -39,6 +39,10 @@ include_once("../app/db/db-conn.php")
         <?php include_once("core/header.php"); ?>
     </header>
 
+    <?php $movie = fetchMovieData($_GET["film"]);
+    $movie = $movie["data"][0];
+    ?>
+
     <main>
         <div id="content">
             <div id="title">
@@ -47,7 +51,7 @@ include_once("../app/db/db-conn.php")
 
             <div id="filters">
                 <div id="moviename">
-                <p><?= $movie['title'] ?></p>
+                    <p><?= $movie["title"] ?></p>
                 </div>
                 <div id="date">
                     <select name="" id="">
@@ -159,27 +163,31 @@ include_once("../app/db/db-conn.php")
                     <!--                Ga hier door met de html (en php) voor de pagina-->
                     <div class="stap-3">
 
-                    <div class="bestelling-box">
-    <div class="bestelling-box-left">
-        <img class="film-poster" src="<?= $movie['image'] ?>">
-    </div>
-    <div class="bestelling-box-right">
-        <p class="film-title"><?= $movie['title'] ?></p>
-        <div class="film-kijkwijzers">
-        <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
-                        <img class="kijkwijzer" src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
-                <?php endforeach; ?>
-        </div>
-        <div class="bestelling-info">
-            <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
-            <p><b>Wanneer:</b> [Nog geen data]</p>
-            <p><b>Stoelen:</b><p id="ticketType-repeater2"></p></p>
-            <p><b>Tickets:</b><p id="totalTickets2">0</p></p>
-            <br>
-            <p><b>Totaal # ticket:</b> [Nog geen data]</p>
-        </div>
-    </div>
-</div>
+                        <div class="bestelling-box">
+                            <div class="bestelling-box-left">
+                                <img class="film-poster" src="<?= $movie['image'] ?>">
+                            </div>
+                            <div class="bestelling-box-right">
+                                <p class="film-title"><?= $movie['title'] ?></p>
+                                <div class="film-kijkwijzers">
+                                    <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
+                                        <img class="kijkwijzer" src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="bestelling-info">
+                                    <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
+                                    <p><b>Wanneer:</b> [Nog geen data]</p>
+                                    <p><b>Stoelen:</b>
+                                    <p id="ticketType-repeater2"></p>
+                                    </p>
+                                    <p><b>Tickets:</b>
+                                    <p id="totalTickets2">0</p>
+                                    </p>
+                                    <br>
+                                    <p><b>Totaal # ticket:</b> [Nog geen data]</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="stap-4">
                         <div>
@@ -221,16 +229,33 @@ include_once("../app/db/db-conn.php")
                 </form>
 
                 <div id="movie">
-                    <p>movie</p>
+                    <div class="poster">
+                        <img class="poster-foto" src="<?= $movie['image'] ?>">
+                    </div>
+                    <div class="info-rect">
+                        <h3><?= $movie['title'] ?></h3>
+                    </div>
+                    <div class="info-rect">
+                        <p>
+                            <!-- <?= str_repeat('*', round($movie['rating'] / 2)) ?> -->
+                            IMDB Rating: <?= $movie['rating'] ?>
+                        </p>
+                    </div>
+                    <div class="info-rect">
+                        <h3>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></h3>
+                    </div>
+                    <div class="info-rect">
+                        <h3><?= substr($movie['description'], 0, 100) . '...' ?></h3>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- <p>Main order tickets</p> -->
 
-            <div class="afrekenen">
-                <p>AFREKENEN</p>
-            </div>
+        <div class="afrekenen">
+            <p>AFREKENEN</p>
+        </div>
     </main>
 
     <footer>
