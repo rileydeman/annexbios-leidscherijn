@@ -47,7 +47,7 @@ include_once("../app/db/db-conn.php")
 
             <div id="filters">
                 <div id="moviename">
-                <p><?= $movie['title'] ?></p>
+                    <p><?= $movie['title'] ?></p>
                 </div>
                 <div id="date">
                     <select name="" id="">
@@ -159,27 +159,31 @@ include_once("../app/db/db-conn.php")
                     <!--                Ga hier door met de html (en php) voor de pagina-->
                     <div class="stap-3">
 
-                    <div class="bestelling-box">
-    <div class="bestelling-box-left">
-        <img class="film-poster" src="<?= $movie['image'] ?>">
-    </div>
-    <div class="bestelling-box-right">
-        <p class="film-title"><?= $movie['title'] ?></p>
-        <div class="film-kijkwijzers">
-        <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
-                        <img class="kijkwijzer" src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
-                <?php endforeach; ?>
-        </div>
-        <div class="bestelling-info">
-            <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
-            <p><b>Wanneer:</b> [Nog geen data]</p>
-            <p><b>Stoelen:</b><p id="ticketType-repeater2"></p></p>
-            <p><b>Tickets:</b><p id="totalTickets2">0</p></p>
-            <br>
-            <p><b>Totaal # ticket:</b> [Nog geen data]</p>
-        </div>
-    </div>
-</div>
+                        <div class="bestelling-box">
+                            <div class="bestelling-box-left">
+                                <img class="film-poster" src="<?= $movie['image'] ?>">
+                            </div>
+                            <div class="bestelling-box-right">
+                                <p class="film-title"><?= $movie['title'] ?></p>
+                                <div class="film-kijkwijzers">
+                                    <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
+                                        <img class="kijkwijzer" src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="bestelling-info">
+                                    <p><b>Bioscoop:</b> AnnexBios Leidscherijn</p>
+                                    <p><b>Wanneer:</b> [Nog geen data]</p>
+                                    <p><b>Stoelen:</b>
+                                    <p id="ticketType-repeater2"></p>
+                                    </p>
+                                    <p><b>Tickets:</b>
+                                    <p id="totalTickets2">0</p>
+                                    </p>
+                                    <br>
+                                    <p><b>Totaal # ticket:</b> [Nog geen data]</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="stap-4">
                         <div>
@@ -228,9 +232,9 @@ include_once("../app/db/db-conn.php")
 
         <!-- <p>Main order tickets</p> -->
 
-            <div class="afrekenen">
-                <p>AFREKENEN</p>
-            </div>
+        <div class="afrekenen">
+            <p>AFREKENEN</p>
+        </div>
     </main>
 
     <footer>

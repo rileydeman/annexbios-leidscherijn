@@ -44,80 +44,81 @@ include_once("../app/db/db-conn.php")
 
     <main>
 
-<div id="content">
-    <div id="title">
-        <h1 id="title-text"><?= $movie['title'] ?></h1>
-    </div>
-
-    <div id="info">
-        <div id="poster">
-            <img src="<?= $movie['image'] ?>" alt="<?= $movie['title'] ?>">
-        </div>
-
-        <div id="information">
-            <div id="stars">
-                <?php
-                $rating = round($movie['rating'] / 2); // Assuming rating is out of 10
-                for ($i = 1; $i <= 5; $i++) {
-                    $starType = $i <= $rating ? 'filled' : 'empty';
-                    echo "<div class='star'><img src='" . BASEURL . "public/assets/img/icons/star-{$starType}.png' alt=''></div>";
-                }
-                ?>
+        <div id="content">
+            <div id="title">
+                <h1 id="title-text"><?= $movie['title'] ?></h1>
             </div>
-            <div id="kijkwijzers">
-                <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
-                    <div class="wijzer">
-                        <img src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
+
+            <div id="info">
+                <div id="poster">
+                    <img src="<?= $movie['image'] ?>" alt="<?= $movie['title'] ?>">
+                </div>
+
+                <div id="information">
+                    <div id="stars">
+                        <?php
+                        $rating = round($movie['rating'] / 2); // Assuming rating is out of 10
+                        for ($i = 1; $i <= 5; $i++) {
+                            $starType = $i <= $rating ? 'filled' : 'empty';
+                            echo "<div class='star'><img src='" . BASEURL . "public/assets/img/icons/star-{$starType}.png' alt=''></div>";
+                        }
+                        ?>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                    <div id="kijkwijzers">
+                        <?php foreach ($movie['viewing_guides']['symbols'] as $symbol): ?>
+                            <div class="wijzer">
+                                <img src="<?= $symbol['image'] ?>" title="<?= $symbol['name'] ?>" alt="<?= $symbol['name'] ?>">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
 
-            <div id="release">
-                <p>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></p>
-            </div>
+                    <div id="release">
+                        <p>Release: <?= date('d-m-Y', strtotime($movie['release_date'])) ?></p>
+                    </div>
 
-            <div id="description">
-                <p><?= $movie['description'] ?></p>
-            </div>
+                    <div id="description">
+                        <p><?= $movie['description'] ?></p>
+                    </div>
 
-            <div id="extraInfo">
-                <p><b>Genre:</b>
-                    <?php foreach ($movie['genres'] as $genre){
-                    // var_dump($genre);
-                    echo $genre['name'].'&nbsp;';
-                    }?>
-                </p>
-                <p><b>Filmlengte:</b> <?= $movie['length'] ?> minuten</p>
-                <p><b>Land:</b> USA</p>
-                <p><b>Imdb score:</b> <?= $movie['rating'] ?>/10</p>
-                <p><b>Regisseur:</b> <?= $movie['directors'][0]['name'] ?></p>
-                <p><b>Acteurs:</b></p>
-                <div id="actors">
-                    <?php foreach (array_slice($movie['actors'], 0, 7) as $actor): ?>
-                        <div class="actor">
-                            <img src="<?= $actor['image'] ?: BASEURL . 'public/assets/img/persoon.png' ?>" alt="<?= $actor['name'] ?>">
-                            <p><?= $actor['name'] ?></p>
+                    <div id="extraInfo">
+                        <p><b>Genre:</b>
+                            <?php foreach ($movie['genres'] as $genre) {
+                                // var_dump($genre);
+                                echo $genre['name'] . '&nbsp;';
+                            } ?>
+                        </p>
+                        <p><b>Filmlengte:</b> <?= $movie['length'] ?> minuten</p>
+                        <p><b>Land:</b> USA</p>
+                        <p><b>Imdb score:</b> <?= $movie['rating'] ?>/10</p>
+                        <p><b>Regisseur:</b> <?= $movie['directors'][0]['name'] ?></p>
+                        <p><b>Acteurs:</b></p>
+                        <div id="actors">
+                            <?php foreach (array_slice($movie['actors'], 0, 7) as $actor): ?>
+                                <div class="actor">
+                                    <img src="<?= $actor['image'] ?: BASEURL . 'public/assets/img/persoon.png' ?>" alt="<?= $actor['name'] ?>">
+                                    <p><?= $actor['name'] ?></p>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
+
+            <a href="<?= BASEURL ?>bestellen?film=<?= $movie['api_id'] ?>" id="buyTickets">
+                <p>KOOP JE TICKETS</p>
+            </a>
+
+            <div id="trailer">
+                <?php
+                function generateYoutubeEmbedLink($link)
+                {
+                    $videoId = explode("?v=", $link)[1];
+                    return "https://www.youtube.com/embed/" . $videoId;
+                }
+                ?>
+                <iframe class="trailer" src="<?= generateYoutubeEmbedLink($movie['trailer_link']) ?>" title="<?= $movie['title'] ?> - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
-
-    <a href="<?= BASEURL ?>bestellen?film=<?= $movie['api_id'] ?>" id="buyTickets">
-        <p>KOOP JE TICKETS</p>
-    </a>
-
-    <div id="trailer">
-        <?php
-        function generateYoutubeEmbedLink($link) {
-            $videoId = explode("?v=", $link)[1];
-            return "https://www.youtube.com/embed/" . $videoId;
-        }
-        ?>
-        <iframe class="trailer" src="<?= generateYoutubeEmbedLink($movie['trailer_link']) ?>" title="<?= $movie['title'] ?> - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-</div>
     </main>
 
     <footer>
