@@ -11,7 +11,7 @@
 
         foreach ($nav as $navItem) {
         ?>
-        <a href="<?= $navItem["url"] ?>" class="menuItem">
+        <a href="<?=BASEURL?><?= $navItem["url"] ?>" class="menuItem">
             <p><?= strtoupper($navItem["name"]) ?></p>
         </a>
         <?php } ?>
