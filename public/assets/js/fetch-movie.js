@@ -1,6 +1,3 @@
-const token = '50e0ad3617490b19272646df7ce799f0d78d517240e650830a4ddcab9e3bd8aa';
-const fetch_url = 'https://annexbios.nickvz.nl/api/v1/movieData/' + id;
-
 // API ID
 // console.log(fetch_url)
 // const result = data;

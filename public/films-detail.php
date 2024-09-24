@@ -29,9 +29,6 @@ include_once("../app/db/db-conn.php")
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="<?= BASEURL ?>public/assets/js/app.js?v=<?= time() ?>"></script>
     <script defer src="<?= BASEURL ?>public/assets/js/header.js?v=<?= time() ?>"></script>
-    <script defer>
-        let id = <?= $_GET["film"] ?>;
-    </script>
     <script defer src="<?= BASEURL ?>public/assets/js/fetch-movie.js"></script>
 
 </head>
